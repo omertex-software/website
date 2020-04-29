@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'Lato Light';
+    src: url('../../fonts/Lato/latolight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+.header {
+    height: 109px;
+    background-color: #000000;
+}
+.company_logo {
+    text-decoration: none;
+    height: 31px;
+}
+.header_menu a:not(:first-child) {
+    margin-left: 73px;
+}
+.header_menu_link {
+    font-family: 'Lato Light', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header_menu_link:hover {
+    margin-top: 2px;
+    border-bottom: 1px solid #FFFFFF;
+}
