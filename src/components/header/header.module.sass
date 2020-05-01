@@ -10,10 +10,29 @@
   position: sticky
   top: 0
   z-index: 1000
+  border-bottom: 1px solid #000000
+  transition: all ease-in-out 0.3s
+  -webkit-transition: all ease-in-out 0.3s
+  -moz-transition: all ease-in-out 0.3s
+
+.header_white
+  border-bottom: 1px solid #EFEFEF
+  background-color: #FFFFFF
+  .company_logo
+    background-image: url("../../assets/images/common/svg_logo_black.svg")
+  .header_menu_link
+    color: #000000
+    &.header_menu_link:hover
+      border-bottom: 1px solid #000000
 
 .company_logo
-  text-decoration: none
+  width: 141px
   height: 31px
+  text-decoration: none
+  background-image: url("../../assets/images/common/svg_logo_white.svg")
+  transition: background-image ease-in-out 0.3s
+  -webkit-transition: background-image ease-in-out 0.3s
+  -moz-transition: background-image ease-in-out 0.3s
 
 .header_menu
   a:not(:first-child)
@@ -26,6 +45,9 @@
   letter-spacing: 0.02em
   color: #ffffff
   text-decoration: none
+  transition: all ease-in-out 0.3s
+  -webkit-transition: all ease-in-out 0.3s
+  -moz-transition: all ease-in-out 0.3s
   &:hover
-    margin-top: 2px
+    margin-top: 1px
     border-bottom: 1px solid #FFFFFF
