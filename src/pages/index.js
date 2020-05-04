@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import containers from "../assets/styles/containers.module.sass"
@@ -26,6 +27,23 @@ export const sharpImage = graphql`
 `
 
 export default () => {
+  const [shownCases, setShownCases] = useState({})
+
+  const showCase = name => {
+    setShownCases(prevState => ({
+      ...prevState,
+      [name]: !prevState[name],
+    }))
+  }
+
+  const showList = target => {
+    if (target.tagName === "LI") {
+      target.className === style.show_questions
+        ? (target.className = "")
+        : (target.className = style.show_questions)
+    }
+  }
+
   const images = useStaticQuery(graphql`
     query {
       become: file(relativePath: { eq: "main/become_bg.png" }) {
@@ -172,7 +190,14 @@ export default () => {
               containers.between
             )}
           >
-            <div className={classNames(style.case, style.case_ways)}>
+            <div
+              className={classNames(
+                style.case,
+                style.case_ways,
+                shownCases.ways ? style.show_case : ""
+              )}
+              onClick={() => showCase("ways")}
+            >
               <div className={style.case_view}>
                 <Img
                   fluid={images.ways.childImageSharp.fluid}
@@ -187,7 +212,7 @@ export default () => {
                   containers.flow_column
                 )}
               >
-                <p className={style.body_2}>
+                <p className={style.body_5}>
                   Sooner or later the necessity to reduce fixed and operational
                   costs becomes vital for every growing business.
                   <br />
@@ -204,11 +229,20 @@ export default () => {
                     containers.justify_center
                   )}
                 >
-                  <button className={buttons.btn_dark}>Read the insight</button>
+                  <Link className={buttons.btn_dark} to="/">
+                    Read the insight
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className={classNames(style.case, style.case_steps)}>
+            <div
+              className={classNames(
+                style.case,
+                style.case_steps,
+                shownCases.steps ? style.show_case : ""
+              )}
+              onClick={() => showCase("steps")}
+            >
               <div className={style.case_view}>
                 <Img
                   fluid={images.steps.childImageSharp.fluid}
@@ -225,7 +259,7 @@ export default () => {
                   containers.flow_column
                 )}
               >
-                <p className={style.body_2}>
+                <p className={style.body_5}>
                   There are other companies/services out of there.
                   <br />
                   And the service they provide to their customers is in some way
@@ -245,11 +279,20 @@ export default () => {
                     containers.justify_center
                   )}
                 >
-                  <button className={buttons.btn_dark}>Read the insight</button>
+                  <Link className={buttons.btn_dark} to="/">
+                    Read the insight
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className={classNames(style.case, style.case_idea)}>
+            <div
+              className={classNames(
+                style.case,
+                style.case_idea,
+                shownCases.idea ? style.show_case : ""
+              )}
+              onClick={() => showCase("idea")}
+            >
               <div className={style.case_view}>
                 <Img
                   fluid={images.idea.childImageSharp.fluid}
@@ -266,7 +309,7 @@ export default () => {
                   containers.flow_column
                 )}
               >
-                <p className={style.body_2}>
+                <p className={style.body_5}>
                   It’s not clear does it worth to invest into it.
                   <br />
                   <br />
@@ -279,7 +322,9 @@ export default () => {
                     containers.justify_center
                   )}
                 >
-                  <button className={buttons.btn_dark}>Read the insight</button>
+                  <Link className={buttons.btn_dark} to="/gg">
+                    Read the insight
+                  </Link>
                 </div>
               </div>
             </div>
@@ -293,6 +338,18 @@ export default () => {
           style.daryou
         )}
       >
+        <div className={style.app_hover_content}>
+          <Link
+            className={classNames(
+              style.app_hover_btn_right,
+              containers.justify_center,
+              containers.align_center
+            )}
+            to="/"
+          >
+            request the case study
+          </Link>
+        </div>
         <div className={classNames(containers.content_1600, containers.flex)}>
           <div className={style.daryou_info}>
             <h2 className={classNames(style.title_2, style.daryou_info_t2)}>
@@ -348,6 +405,18 @@ export default () => {
           style.dragonoption
         )}
       >
+        <div className={style.app_hover_content}>
+          <Link
+            className={classNames(
+              style.app_hover_btn_left,
+              containers.justify_center,
+              containers.align_center
+            )}
+            to="/"
+          >
+            request the case study
+          </Link>
+        </div>
         <div
           className={classNames(containers.content_1600, containers.between)}
         >
@@ -402,6 +471,18 @@ export default () => {
           style.loanstream
         )}
       >
+        <div className={style.app_hover_content}>
+          <Link
+            className={classNames(
+              style.app_hover_btn_right,
+              containers.justify_center,
+              containers.align_center
+            )}
+            to="/"
+          >
+            request the case study
+          </Link>
+        </div>
         <div className={classNames(containers.content_1600, containers.flex)}>
           <div className={style.loanstream_info}>
             <h2 className={classNames(style.title_2, style.loanstream_info_t2)}>
@@ -450,11 +531,6 @@ export default () => {
                 </p>
               </div>
             </div>
-            {/*<img*/}
-            {/*  className={style.loanstream_app_img}*/}
-            {/*  src={loanstream_app}*/}
-            {/*  alt={"Loanstream app"}*/}
-            {/*/>*/}
             <Img
               fluid={images.loanstream_app.childImageSharp.fluid}
               className={style.loanstream_app_img}
@@ -714,8 +790,36 @@ export default () => {
             The questions we’re most commonly asked
           </h1>
           <div className={containers.between}>
-            <ul className={style.questions_list}>
-              <li>How big is your agency?</li>
+            <ul
+              className={style.questions_list}
+              onClick={e => showList(e.target)}
+            >
+              <li>
+                How big is your agency?
+                <p className={classNames(style.body_5, style.question_text)}>
+                  Tempor est est consequat ipsum velit commodo elit est nulla
+                  amet dolore velit. Est ullamco eiusmod deserunt deserunt ad
+                  consectetur tempor nulla id amet labore occaecat deserunt
+                  voluptate. Enim aute proident nostrud amet culpa irure esse
+                  aliqua pariatur consectetur. Id fugiat tempor minim qui in
+                  fugiat dolor do labore cillum dolor. Consequat ipsum irure sit
+                  magna sunt commodo aliqua velit consequat dolor in enim nulla.
+                  Et cupidatat veniam ullamco irure amet aliquip fugiat pariatur
+                  eu minim exercitation. Aliquip ullamco duis aute pariatur sunt
+                  non qui ex. Quis ipsum exercitation eiusmod deserunt. Nisi
+                  amet enim ullamco ipsum reprehenderit cupidatat officia
+                  excepteur enim. Exercitation nostrud Lorem consequat mollit
+                  tempor ullamco irure fugiat ad ipsum laboris ut. Tempor ad
+                  duis amet exercitation qui dolor ullamco elit ex sunt aliquip
+                  non enim sunt. Duis consectetur laboris Lorem qui fugiat
+                  cupidatat. Dolor culpa qui excepteur commodo proident. Laborum
+                  veniam incididunt consectetur duis eiusmod. In et eu ullamco
+                  in culpa dolor. Id nostrud dolore enim nulla pariatur veniam
+                  ut commodo proident non non ut. Irure dolor deserunt dolore
+                  laboris ad excepteur eu. Ad voluptate ad sunt in Lorem Lorem
+                  ut commodo.
+                </p>
+              </li>
               <li>Where is your office?</li>
               <li>Will you keep keep secret my idea ?</li>
               <li>How much does it cost?</li>
@@ -727,7 +831,9 @@ export default () => {
               <li>When can we meet up?</li>
               <li>What do I need to provide so that we start working?</li>
             </ul>
-            <img width="233" src={question} alt="Question" />
+            <div>
+              <img width="233" src={question} alt="Question" />
+            </div>
           </div>
           <div className={containers.justify_center}>
             <h2 className={classNames(style.title_2, style.questions_t2)}>
