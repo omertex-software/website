@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import { bitrix24ContactForm } from "../helpers/bitrix24Scripts"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
@@ -94,6 +95,7 @@ export default () => {
 
   return (
     <Layout>
+      <Helmet title="Software Product Development Company - Omertex" charSet="utf-8" defer={false}/>
       <BackgroundImage
         Tag="section"
         className={classNames(
