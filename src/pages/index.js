@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
+import { bitrix24ContactForm } from "../helpers/bitrix24Scripts"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
@@ -28,6 +29,11 @@ export const sharpImage = graphql`
 
 export default () => {
   const [shownCases, setShownCases] = useState({})
+  const [contactForm, setContactForm] = useState()
+
+  useEffect(() => {
+    bitrix24ContactForm(setContactForm)
+  }, [])
 
   const showCase = name => {
     setShownCases(prevState => ({
@@ -874,6 +880,7 @@ export default () => {
           </div>
         </div>
       </BackgroundImage>
+      {contactForm}
     </Layout>
   )
 }
