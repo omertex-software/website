@@ -1,10 +1,10 @@
 .content_1600
   width: 1600px
-  padding: 0 50px
+  padding: 0 108px
 
-.content_1270
-  width: 1274px
-  padding: 0 50px
+.content_1060
+  width: 1060px
+  padding: 0 108px
 
 .section
   width: 100%
@@ -27,3 +27,19 @@
 .flow_column
   display: flex
   flex-flow: column
+
+@media screen and (max-width: 1600px)
+  .content_1600
+    width: 100%
+
+@media screen and (max-width: 1280px)
+  .content_1600, .content_1060
+    padding: 0 60px
+
+@media screen and (max-width: 1060px)
+  .content_1060
+    width: 100%
+
+@media screen and (max-width: 760px)
+  .content_1600, .content_1060
+    padding: 0 16px

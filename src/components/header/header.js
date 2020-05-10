@@ -26,7 +26,23 @@ const Header = () => {
         changed ? style.header_white : ""
       )}
     >
-      <div className={classNames(containers.content_1600, containers.between)}>
+      <div
+        className={classNames(
+          containers.content_1600,
+          style.header_mobile,
+          containers.justify_center
+        )}
+      >
+        <button className={style.header_mobile_menu} />
+        <Link to="/" className={style.company_logo_mini} />
+      </div>
+      <div
+        className={classNames(
+          containers.content_1600,
+          style.header_desktop,
+          containers.between
+        )}
+      >
         <Link to="/" className={style.company_logo} />
         <div className={classNames(style.header_menu, containers.align_center)}>
           <Link className={style.header_menu_link} to="/">

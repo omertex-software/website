@@ -15,11 +15,32 @@
   -webkit-transition: all ease-in-out 0.3s
   -moz-transition: all ease-in-out 0.3s
 
+.header_mobile
+  display: none
+
+.header_mobile_menu
+  width: 30px
+  height: 31px
+  position: absolute
+  left: 16px
+  background: url("../../assets/images/header/svg_menu_white.svg") no-repeat center
+  border: 0
+
+.company_logo_mini
+  width: 30px
+  height: 30px
+  background: url("../../assets/images/header/svg_logo_mini.svg") no-repeat center
+
+.header_desktop
+  display: flex
+
 .header_white
   border-bottom: 1px solid #EFEFEF
   background-color: #FFFFFF
   .company_logo
-    background-image: url("../../assets/images/common/svg_logo_black.svg")
+    background-image: url("../../assets/images/header/svg_logo_black.svg")
+  .header_mobile_menu
+    background-image: url("../../assets/images/header/svg_menu_black.svg")
   .header_menu_link
     color: #000000
     &.header_menu_link:hover
@@ -29,7 +50,8 @@
   width: 141px
   height: 31px
   text-decoration: none
-  background-image: url("../../assets/images/common/svg_logo_white.svg")
+  background-image: url("../../assets/images/header/svg_logo_white.svg")
+  background-repeat: no-repeat
   transition: background-image ease-in-out 0.3s
   -webkit-transition: background-image ease-in-out 0.3s
   -moz-transition: background-image ease-in-out 0.3s
@@ -51,3 +73,22 @@
   &:hover
     margin-top: 1px
     border-bottom: 1px solid #FFFFFF
+
+@media screen and (max-width: 1280px)
+  .company_logo
+    width: 111px
+    height: 24px
+
+  .header_menu
+    a:not(:first-child)
+      margin-left: 30px
+
+  .header_menu_link
+    font-size: 16px
+
+@media screen and (max-width: 760px)
+  .header_mobile
+    display: flex
+
+  .header_desktop
+    display: none

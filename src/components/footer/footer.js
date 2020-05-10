@@ -37,13 +37,21 @@ const Footer = () => (
           className={classNames(
             style.footer_column_tech,
             containers.align_center,
-            containers.between
+            containers.flex
           )}
         >
-          <img width="57" height="62" src={clutch} alt="Clutch" />
-          <img width="72" height="58" src={goodfirms} alt="GoodFirms" />
-          <img width="57" height="56" src={guru} alt="Guru" />
-          <img width="72" height="58" src={appfutura} alt="AppFutura" />
+          <img className={style.footer_clutch} src={clutch} alt="Clutch" />
+          <img
+            className={style.footer_goodfirms}
+            src={goodfirms}
+            alt="GoodFirms"
+          />
+          <img className={style.footer_guru} src={guru} alt="Guru" />
+          <img
+            className={style.fotter_appfutura}
+            src={appfutura}
+            alt="AppFutura"
+          />
         </div>
       </div>
 
