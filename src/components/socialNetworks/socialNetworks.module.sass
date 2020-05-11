@@ -1,0 +1,53 @@
+.social_container
+  width: 60px
+  height: 60px
+  display: flex
+  flex-direction: column
+  position: fixed
+  z-index: 10
+  right: 40px
+  bottom: 40px
+  background-color: #EAEAEA
+  border-radius: 30px
+  transition: all ease-in-out 0.3s
+  -webkit-transition: all ease-in-out 0.3s
+  -moz-transition: all ease-in-out 0.3s
+
+.social_close
+  width: 27px
+  height: 27px
+  margin: 0 auto
+  border: 0
+  background: url('../../assets/images/social/svg_icon_close.svg') no-repeat center
+  cursor: pointer
+  outline: none
+
+.social_whatsapp
+  width: 36px
+  height: 36px
+  margin: 6px auto
+  background: url('../../assets/images/social/svg_icon_whatsapp.svg') no-repeat center
+
+.social_telegram
+  @extend .social_whatsapp
+  background: url('../../assets/images/social/svg_icon_telegram.svg') no-repeat center
+
+.social_facebook
+  @extend .social_whatsapp
+  background: url('../../assets/images/social/svg_icon_facebook.svg') no-repeat center
+
+.social_message
+  width: 60px
+  height: 60px
+  position: absolute
+  bottom: 0
+  margin-top: auto
+  border: 2px solid #EAEAEA
+  border-radius: 60px
+  background: url('../../assets/images/social/svg_icon_message.svg') no-repeat center #FFFFFF
+  cursor: pointer
+  outline: none
+
+.show_items
+  height: 240px
+  border-radius: 8px 8px 30px 30px
