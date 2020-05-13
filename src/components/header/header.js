@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import classNames from "../../helpers/classNames"
 import style from "./header.module.sass"
+import MobileMenu from "../mobileMenu/mobileMenu"
 
 const Header = () => {
   const [changed, setChanged] = useState(false)
-  // const [menuOpened, setMenuOpened] = useState(false)
+  const [menuOpened, setMenuOpened] = useState(false)
 
   const listenScrollEvent = () => {
     window.pageYOffset > 50 ? setChanged(true) : setChanged(false)
@@ -16,13 +17,16 @@ const Header = () => {
     return () => window.removeEventListener("scroll", listenScrollEvent)
   }, [])
 
-  // const reopenMobileMenu = () => {
-  //   setMenuOpened(!menuOpened)
-  // }
+  const reopenMobileMenu = () => {
+    !menuOpened
+      ? (document.body.style = "overflow: hidden")
+      : (document.body.style = "overflow: auto")
+    setMenuOpened(!menuOpened)
+  }
 
   return (
     <>
-      {/*{menuOpened && <div className={style.mobile_menu}>12</div>}*/}
+      <MobileMenu opened={menuOpened} reopenMobileMenu={reopenMobileMenu} />
       <header
         className={classNames(
           style.section,
@@ -41,7 +45,7 @@ const Header = () => {
         >
           <button
             className={style.header_mobile_menu}
-            // onClick={reopenMobileMenu}
+            onClick={reopenMobileMenu}
           />
           <Link to="/" className={style.company_logo_mini} />
         </div>
