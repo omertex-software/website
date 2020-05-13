@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import classNames from "../../helpers/classNames"
-import containers from "../../assets/styles/containers.module.sass"
 import style from "./header.module.sass"
 
 const Header = () => {
   const [changed, setChanged] = useState(false)
+  // const [menuOpened, setMenuOpened] = useState(false)
 
   const listenScrollEvent = () => {
     window.scrollY > 50 ? setChanged(true) : setChanged(false)
@@ -16,50 +16,60 @@ const Header = () => {
     return () => window.removeEventListener("scroll", listenScrollEvent)
   }, [])
 
+  // const reopenMobileMenu = () => {
+  //   setMenuOpened(!menuOpened)
+  // }
+
   return (
-    <header
-      className={classNames(
-        containers.section,
-        style.header,
-        containers.justify_center,
-        containers.align_center,
-        changed ? style.header_white : ""
-      )}
-    >
-      <div
+    <>
+      {/*{menuOpened && <div className={style.mobile_menu}>12</div>}*/}
+      <header
         className={classNames(
-          containers.content_1600,
-          style.header_mobile,
-          containers.justify_center
+          style.section,
+          style.header,
+          style.justify_center,
+          style.align_center,
+          changed ? style.header_white : ""
         )}
       >
-        <button className={style.header_mobile_menu} />
-        <Link to="/" className={style.company_logo_mini} />
-      </div>
-      <div
-        className={classNames(
-          containers.content_1600,
-          style.header_desktop,
-          containers.between
-        )}
-      >
-        <Link to="/" className={style.company_logo} />
-        <div className={classNames(style.header_menu, containers.align_center)}>
-          <Link className={style.header_menu_link} to="/">
-            Services
-          </Link>
-          <Link className={style.header_menu_link} to="/">
-            Insights
-          </Link>
-          <Link className={style.header_menu_link} to="/">
-            About us
-          </Link>
-          <Link className={style.header_menu_link} to="/">
-            Take a Quiz
-          </Link>
+        <div
+          className={classNames(
+            style.content,
+            style.header_mobile,
+            style.justify_center
+          )}
+        >
+          <button
+            className={style.header_mobile_menu}
+            // onClick={reopenMobileMenu}
+          />
+          <Link to="/" className={style.company_logo_mini} />
         </div>
-      </div>
-    </header>
+        <div
+          className={classNames(
+            style.content,
+            style.header_desktop,
+            style.between
+          )}
+        >
+          <Link to="/" className={style.company_logo} />
+          <div className={classNames(style.header_menu, style.align_center)}>
+            <Link className={style.header_menu_link} to="/">
+              Services
+            </Link>
+            <Link className={style.header_menu_link} to="/">
+              Insights
+            </Link>
+            <Link className={style.header_menu_link} to="/">
+              About us
+            </Link>
+            <Link className={style.header_menu_link} to="/">
+              Take a Quiz
+            </Link>
+          </div>
+        </div>
+      </header>
+    </>
   )
 }
 

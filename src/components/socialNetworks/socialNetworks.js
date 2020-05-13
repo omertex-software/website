@@ -17,9 +17,21 @@ const SocialNetworks = () => {
       )}
     >
       <button className={style.social_close} onClick={changeOpened} />
-      <a className={style.social_whatsapp} href="https://wa.me/375296524258" />
-      <a className={style.social_telegram} href="https://t.me/promaker1" />
-      <a className={style.social_facebook} href="http://m.me/dkhanevich" />
+      <a
+        className={style.social_whatsapp}
+        target="_blank"
+        href="https://wa.me/375296524258"
+      />
+      <a
+        className={style.social_telegram}
+        target="_blank"
+        href="https://t.me/promaker1"
+      />
+      <a
+        className={style.social_facebook}
+        target="_blank"
+        href="http://m.me/dkhanevich"
+      />
       <button className={style.social_message} onClick={changeOpened} />
     </div>
   )

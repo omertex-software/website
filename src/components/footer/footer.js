@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import classNames from "../../helpers/classNames"
-import containers from "../../assets/styles/containers.module.sass"
 import buttons from "../../assets/styles/buttons.module.sass"
 import style from "./footer.module.sass"
 
@@ -17,136 +16,126 @@ import linkedin from "../../assets/images/footer/svg_icon_linkedin.svg"
 
 const Footer = () => (
   <footer
-    className={classNames(
-      containers.section,
-      containers.justify_center,
-      style.footer
-    )}
+    className={classNames(style.section, style.justify_center, style.footer)}
   >
-    <div className={classNames(containers.content_1600, containers.between)}>
-      <div className={classNames(style.footer_column, containers.flow_column)}>
-        <h2 className={style.footer_column_t4}>
-          Lets build something great together
-        </h2>
-        <p className={style.footer_column_b2}>
-          We strive to be a guide for entrepreneurs in the world of information
-          technology and seek perfection in everything we do, transferring that
-          vision to technologies.
-        </p>
-        <div
-          className={classNames(
-            style.footer_column_tech,
-            containers.align_center,
-            containers.flex
-          )}
-        >
-          <img className={style.footer_clutch} src={clutch} alt="Clutch" />
-          <img
-            className={style.footer_goodfirms}
-            src={goodfirms}
-            alt="GoodFirms"
-          />
-          <img className={style.footer_guru} src={guru} alt="Guru" />
-          <img
-            className={style.fotter_appfutura}
-            src={appfutura}
-            alt="AppFutura"
-          />
-        </div>
-      </div>
-
-      <div className={classNames(style.footer_column, containers.flow_column)}>
-        <h2 className={style.footer_column_t4}>Competense</h2>
-        <ul className={style.footer_column_links}>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              User experience (UX) design
-            </Link>
-          </li>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              User Interface (UI) design
-            </Link>
-          </li>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              Website development
-            </Link>
-          </li>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              Mobile application developmen
-            </Link>
-          </li>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              Branding
-            </Link>
-          </li>
-          <li>
-            <Link className={style.footer_column_b2} to="/">
-              Promotion
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div className={style.footer_column}>
-        <h2 className={style.footer_column_t4}>Numbers</h2>
-        <div className={classNames(style.footer_column_b2, containers.flex)}>
-          <p className={style.footer_column_span}>70 +</p>
-          <p>projects implemented</p>
-        </div>
-        <div className={classNames(style.footer_column_b2, containers.flex)}>
-          <p className={style.footer_column_span}>40</p>
-          <p>pros in the team</p>
-        </div>
-        <div className={classNames(style.footer_column_b2, containers.flex)}>
-          <p className={style.footer_column_span}>97%</p>
-          <p>satisfaction rate</p>
-        </div>
-      </div>
-
-      <div className={style.footer_column}>
-        <h2 className={style.footer_column_t4}>
-          22701 E Avenida del Valle, Queen Creek, AZ, USA
-        </h2>
-        <div className={classNames(style.footer_column_b2, containers.flex)}>
-          <div className={style.footer_column_span}>
-            <img width="22" src={mail} alt="Mail icon" />
-          </div>
-          <a
-            className={style.footer_column_b2}
-            href="mailto:contact@omertex.com"
+    <div className={classNames(style.content, style.footer_container)}>
+        <div className={classNames(style.footer_column, style.flow_column)}>
+          <p className={style.footer_column_t4}>
+            Lets build something great together
+          </p>
+          <p className={style.footer_column_b2}>
+            We strive to be a guide for entrepreneurs in the world of
+            information technology and seek perfection in everything we do,
+            transferring that vision to technologies.
+          </p>
+          <div
+            className={classNames(
+              style.footer_column_tech,
+              style.align_center,
+              style.flex
+            )}
           >
-            contact@omertex.com
-          </a>
-        </div>
-        <div className={classNames(style.footer_column_b2, containers.flex)}>
-          <div className={style.footer_column_span}>
-            <img width="20" src={phone} alt="Phone icon" />
+            <img src={clutch} alt="Clutch" />
+            <img src={goodfirms} alt="GoodFirms" />
+            <img src={guru} alt="Guru" />
+            <img src={appfutura} alt="AppFutura" />
           </div>
-          <a className={style.footer_column_b2} href="tel:+3754802104771">
-            (480)-210-4771
-          </a>
         </div>
-        <div
-          className={classNames(style.footer_column_social, containers.between)}
-        >
-          <a className={containers.justify_center} href="/">
-            <img src={twitter} alt="Twitter icon" />
-          </a>
-          <a className={containers.justify_center} href="/">
-            <img src={facebook} alt="Facebook icon" />
-          </a>
-          <a className={containers.justify_center} href="/">
-            <img src={linkedin} alt="LinkedIn icon" />
-          </a>
+
+        <div className={classNames(style.footer_column, style.flow_column)}>
+          <p className={style.footer_column_t4}>Competense</p>
+          <ul className={style.footer_column_links}>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                User experience (UX) design
+              </Link>
+            </li>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                User Interface (UI) design
+              </Link>
+            </li>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                Website development
+              </Link>
+            </li>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                Mobile application developmen
+              </Link>
+            </li>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                Branding
+              </Link>
+            </li>
+            <li>
+              <Link className={style.footer_column_b2} to="/">
+                Promotion
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div>
-          <button className={buttons.btn_dark}>contact us</button>
+
+        <div className={style.footer_column}>
+          <p className={style.footer_column_t4}>Numbers</p>
+          <div className={classNames(style.footer_column_b2, style.flex)}>
+            <p className={style.footer_column_span}>70 +</p>
+            <p>projects implemented</p>
+          </div>
+          <div className={classNames(style.footer_column_b2, style.flex)}>
+            <p className={style.footer_column_span}>40</p>
+            <p>pros in the team</p>
+          </div>
+          <div className={classNames(style.footer_column_b2, style.flex)}>
+            <p className={style.footer_column_span}>97%</p>
+            <p>satisfaction rate</p>
+          </div>
         </div>
-      </div>
+
+        <div className={style.footer_column}>
+          <p className={style.footer_column_t4}>
+            22701 E Avenida del Valle, Queen Creek, AZ, USA
+          </p>
+          <div className={classNames(style.footer_column_b2, style.flex)}>
+            <div className={style.footer_column_span}>
+              <img width="22" src={mail} alt="Mail icon" />
+            </div>
+            <a
+              className={style.footer_column_b2}
+              href="mailto:contact@omertex.com"
+            >
+              contact@omertex.com
+            </a>
+          </div>
+          <div className={classNames(style.footer_column_b2, style.flex)}>
+            <div className={style.footer_column_span}>
+              <img width="20" src={phone} alt="Phone icon" />
+            </div>
+            <a className={style.footer_column_b2} href="tel:+3754802104771">
+              (480)-210-4771
+            </a>
+          </div>
+          <div
+            className={classNames(style.footer_column_social, style.between)}
+          >
+            <a className={style.justify_center} href="/">
+              <img src={twitter} alt="Twitter icon" />
+            </a>
+            <a className={style.justify_center} href="/">
+              <img src={facebook} alt="Facebook icon" />
+            </a>
+            <a className={style.justify_center} href="/">
+              <img src={linkedin} alt="LinkedIn icon" />
+            </a>
+          </div>
+          <div>
+            <button className={classNames(buttons.btn_dark, style.footer_btn)}>
+              contact us
+            </button>
+          </div>
+        </div>
     </div>
   </footer>
 )

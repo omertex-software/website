@@ -34,83 +34,39 @@
   font-weight: 300
   font-style: normal
 
-.headline_1
-  font-family: 'Lato Black', sans-serif
-  font-size: 100px
-  line-height: 120%
-  letter-spacing: 0.02em
+.content_1600
+  width: 1600px
+  padding: 0 70px
 
-.title_1
-  font-family: 'Lato Black', sans-serif
-  font-size: 40px
-  line-height: 120%
-  letter-spacing: 0.02em
+.content_1060
+  width: 1060px
+  padding: 0 70px
 
-.title_2
-  font-family: 'Lato Bold', sans-serif
-  font-size: 30px
-  line-height: 140%
-  letter-spacing: 0.02em
+.section
+  width: 100%
 
-.title_3
-  font-family: 'Lato Heavy', sans-serif
-  font-size: 20px
-  line-height: 120%
-  letter-spacing: 0.02em
+.flex
+  display: flex
 
-.title_4
-  font-family: 'Lato Heavy', sans-serif
-  font-size: 24px
-  line-height: 120%
-  letter-spacing: 0.02em
+.justify_center
+  display: flex
+  justify-content: center
 
-.title_5
-  font-family: 'Lato Heavy', sans-serif
-  font-size: 16px
-  line-height: 120%
-  letter-spacing: 0.02em
+.align_center
+  display: flex
+  align-items: center
 
-.title_6
-  font-family: 'Lato Heavy', sans-serif
-  font-size: 20px
-  line-height: 120%
-  letter-spacing: 0.02em
+.between
+  display: flex
+  justify-content: space-between
 
-.subtitle_1
-  font-family: 'Lato SemiBold', sans-serif
-  font-size: 30px
-  line-height: 120%
-  letter-spacing: 0.02em
+.around
+  display: flex
+  justify-content: space-around
 
-.body_1
-  font-family: 'Lato Regular', sans-serif
-  font-size: 24px
-  line-height: 140%
-  letter-spacing: 0.02em
-
-.body_2
-  font-family: 'Lato Regular', sans-serif
-  font-size: 20px
-  line-height: 140%
-  letter-spacing: 0.02em
-
-.body_3
-  font-family: 'Lato Light', sans-serif
-  font-size: 20px
-  line-height: 120%
-  letter-spacing: 0.02em
-
-.body_4
-  font-family: 'Lato SemiBold', sans-serif
-  font-size: 24px
-  line-height: 140%
-  letter-spacing: 0.02em
-
-.body_5
-  font-family: 'Lato Regular', sans-serif
-  font-size: 16px
-  line-height: 140%
-  letter-spacing: 0.02em
+.flow_column
+  display: flex
+  flex-flow: column
 
 .outcomes_info
   max-width: 970px
@@ -121,8 +77,18 @@
   background-color: #000000
 
 .outcomes_h1
+  font-family: 'Lato Black', sans-serif
+  font-size: 100px
+  line-height: 120%
+  letter-spacing: 0.02em
   padding-top: 103px
   padding-bottom: 52px
+
+.outcomes_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 24px
+  line-height: 140%
+  letter-spacing: 0.02em
 
 .outcomes_arrows
   margin-top: auto
@@ -139,10 +105,15 @@
   align-items: center
   img
     margin-right: 37px
-  h2
-    margin-right: 20px
   button
     flex-shrink: 0
+
+.ceo_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 24px
+  line-height: 120%
+  letter-spacing: 0.02em
+  margin-right: 20px
 
 .steps
   background: url('../assets/images/main/steps_bg.svg') no-repeat center #FFFFFF
@@ -152,28 +123,46 @@
 
 .steps_step
   padding-bottom: 28px
-  h2
-    text-transform: uppercase
+
+.steps_p
+  font-family: 'Lato Light', sans-serif
+  font-size: 20px
+  line-height: 120%
+  letter-spacing: 0.02em
+
+.steps_h2
+  font-family: 'Lato Black', sans-serif
+  font-size: 60px
+  line-height: 120%
+  letter-spacing: 0.02em
+  text-transform: uppercase
 
 .steps_final_step
   padding-top: 24px
 
 .cases
-  //display: flex
-  //justify-content: center
   background-color: #FAFAFA
-  padding-top: 156px
-  padding-bottom: 112px
+  padding-top: 126px
+  padding-bottom: 142px
 
-.cases_t1
+.cases_h2
   max-width: 540px
+  font-family: 'Lato Black', sans-serif
+  font-size: 40px
+  line-height: 120%
+  letter-spacing: 0.02em
   padding-bottom: 11px
 
+.cases_p
+  font-family: 'Lato SemiBold', sans-serif
+  font-size: 30px
+  line-height: 120%
+  letter-spacing: 0.02em
+
 .cases_box
-  width: 100%
   display: flex
   justify-content: center
-  margin: 96px 0 0 0
+  margin-top: 96px
 
 .case
   width: 300px
@@ -184,12 +173,24 @@
   border-radius: 8px
   flex-shrink: 0
   cursor: pointer
-  &:nth-child(2)
-    margin: 0 20px
+  &:nth-child(3)
+    margin: 0 22px
   &:hover
     box-shadow: 0 0 0 2px #A8BDE5
   &:active
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+
+.case_h6
+  font-family: 'Lato SemiBold', sans-serif
+  font-size: 24px
+  line-height: 140%
+  letter-spacing: 0.02em
+
+.case_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 16px
+  line-height: 140%
+  letter-spacing: 0.02em
 
 .case_view
   opacity: 1
@@ -220,6 +221,11 @@
   h6
     margin-bottom: 10px
 
+.case_wrapper
+  display: none
+  width: 18px
+  flex-shrink: 0
+
 .show_case
   .case_description
     opacity: 1
@@ -236,14 +242,10 @@
 .case_description_btn
   margin-top: auto
 
-//  ------------------------------------
-
 .app_list, .black_app_list
   list-style: none
   margin-left: 15px
   color: #FFFFFF
-
-.app_list, .black_app_list
   li
     margin-bottom: 9px
     font-family: 'Lato Regular', sans-serif
@@ -295,32 +297,49 @@
   @extend .app_hover_btn
   left: 0
 
+.app_container
+  display: flex
+  flex-direction: row
+
 .daryou
   background: linear-gradient(90.43deg, #080709 0.11%, #232428 99.88%)
   color: #FFFFFF
   position: relative
 
 .daryou_info
-  max-width: 950px
+  max-width: 640px
 
-.daryou_info_t2
-  margin: 55px 0
-  color: #FFFFFF
+.daryou_info_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin: 55px 0 50px 0
 
 .daryou_gift
   width: 277px
   height: 261px
-  margin-top: 10px
+  margin-top: 30px
 
 .daryou_app
-  width: 370px
-  padding-top: 63px
-  margin-left: 130px
+  padding-top: 62px
+  margin-left: auto
 
 .daryou_app_header
   margin-left: 49px
-  h2
-    margin-bottom: 2px
+
+.daryou_app_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin-bottom: 5px
+
+.daryou_app_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 140%
+  letter-spacing: 0.02em
 
 .daryou_icon
   width: 85px
@@ -336,138 +355,196 @@
   position: relative
 
 .dragonoption_app
-  /*width: 394px*/
-  padding-top: 79px
+  order: 0
+  padding-top: 54px
 
 .dragonoption_app_header
   margin-left: 49px
-  p
-    color: #968416
+
+.dragonoption_app_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin-bottom: 5px
+
+.dragonoption_app_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 140%
+  color: #968416
+  letter-spacing: 0.02em
 
 .dragonoption_icon
   width: 85px
   height: 85px
 
 .dragonoption_app_img
-  width: 570px
-  margin-top: 20px
-  margin-left: -95px
+  width: 477px
+  margin-top: 30px
+  margin-left: -20px
 
 .dragonoption_info
-  max-width: 990px
+  order: 1
+  max-width: 600px
 
-.dragonoption_info_t2
-  margin: 50px 0
+.dragonoption_info_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin: 34px 0
 
 .dragonoption_bitcoin
   width: 323px
   height: 321px
+  margin-top: -20px
 
 .loanstream
   background-color: #24283F
+  color: #FFFFFF
   position: relative
 
 .loanstream_info
-  max-width: 1040px
+  max-width: 660px
 
-.loanstream_info_t2
-  margin-top: 56px
-  margin-bottom: 50px
-  color: #FFFFFF
+.loanstream_info_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin: 55px 0 50px 0
 
 .loanstream_info_lists
   display: flex
   ul:first-child
-    margin-right: 90px
+    margin-right: 50px
 
 .loanstream_app
-  padding-top: 64px
-  margin-left: 90px
+  width: 325px
+  padding-top: 59px
+  margin-left: auto
+  display: flex
+  flex-direction: column
 
 .loanstream_app_header
   margin-left: 38px
-  h2
-    color: #FFFFFF
-    margin-bottom: 2px
-  p
-    color: #D2D2D3
+
+.loanstream_app_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 30px
+  line-height: 140%
+  letter-spacing: 0.02em
+  margin-bottom: 9px
+
+.loanstream_app_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 140%
+  color: #D2D2D3
+  letter-spacing: 0.02em
 
 .loanstream_icon
   width: 99px
   height: 85px
 
 .loanstream_app_img
-  margin-top: 54px
+  width: 580px
+  margin-top: 44px
   margin-left: -205px
   position: absolute
 
 .insights
-  padding: 132px 0 146px 0
+  padding: 100px 0 176px 0
   background-color: #FFFFFF
 
-.insights_t1
-  padding-bottom: 68px
+.insights_h2
+  font-family: 'Lato Black', sans-serif
+  font-size: 40px
+  line-height: 120%
+  letter-spacing: 0.02em
+  padding-bottom: 55px
+
+.insights_container
+  display: flex
+  flex-direction: row
 
 .insights_full
-  max-width: 785px
-  margin-right: 78px
+  max-width: 620px
 
 .full_insight:not(:last-child)
-  padding-bottom: 40px
+  padding-bottom: 50px
 
 .full_insight_img
-  min-width: 200px
-  width: 200px
-  height: 200px
-  margin-right: 56px
+  width: 150px
+  height: 150px
+  flex-shrink: 0
+  margin-right: 30px
 
-.full_insight_t3, .min_insight_t5
+.full_insight_h5, .min_insight_h6
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 120%
+  letter-spacing: 0.02em
   display: inline
   color: #334059
   border-bottom: 1px solid #334059
 
-.full_insight_t4
-  padding: 30px 0 8px 0
+.min_insight_h6
+  font-size: 16px
 
-.full_insight_b5
-  color: #979797
-  margin-top: auto
+.full_insight_h3
+  font-family: 'Lato Regular', sans-serif
+  font-size: 24px
+  line-height: 120%
+  letter-spacing: 0.02em
+  padding: 23px 0 8px 0
 
-.insights_min
-  max-width: 415px
+.full_insight_p
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 120%
+  letter-spacing: 0.02em
 
 .insights_separator
-  width: 2px
-  margin-top: 23px
-  height: 80%
-  margin-right: 60px
+  width: 1px
+  margin: 0 20px
   background-color: #E2E2E2
+
+.insights_min
+  max-width: 382px
 
 .min_insight
   border-bottom: 1px solid #E2E2E2
-  margin-bottom: 20px
+  margin-bottom: 16px
 
-.min_insight_t6
-  padding: 20px 0
+.min_insight_h4
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 120%
+  padding: 15px 0 17px 0
 
 .min_insight_btn
   margin-top: auto
 
 .questions
   background-color: #FAFAFA
-  padding: 97px 0 83px 0
+  padding: 106px 0 57px 0
 
-.questions_t1
-  padding-bottom: 100px
+.questions_h2
+  font-family: 'Lato Black', sans-serif
+  font-size: 40px
+  line-height: 120%
+  letter-spacing: 0.02em
+  padding-bottom: 52px
 
 .questions_list
-  max-width: 985px
-  padding-right: 100px
+  max-width: 600px
   list-style: none
   li
     margin-bottom: 18px
     font-family: 'Lato Regular', sans-serif
-    font-size: 20px
+    font-size: 16px
     line-height: 140%
     letter-spacing: 0.02em
     cursor: pointer
@@ -482,6 +559,10 @@
       border-radius: 2px
 
 .question_text
+  font-family: 'Lato Regular', sans-serif
+  font-size: 16px
+  line-height: 140%
+  letter-spacing: 0.02em
   opacity: 0
   width: 0
   height: 0
@@ -500,60 +581,91 @@
     position: relative
     padding: 4px 0 0 55px
 
-.questions_t2
-  padding: 130px 0 35px 0
+.question_img
+  width: 185px
+  margin-top: 10px
+
+
+.questions_h3
+  font-family: 'Lato Bold', sans-serif
+  font-size: 36px
+  line-height: 140%
+  letter-spacing: 0.02em
+  padding: 65px 0 35px 0
 
 .become
-  padding: 100px 0 90px 0
+  padding: 95px 0 58px 0
   text-align: center
+  color: #FFFFFF
   background-color: #000000
 
 .become_content
-  width: 770px
+  max-width: 770px
   padding: 0 50px
 
-.become_t2
-  color: #FFFFFF
+.become_h2
+  font-family: 'Lato Bold', sans-serif
+  font-size: 36px
+  line-height: 140%
+  letter-spacing: 0.02em
 
 .become_b3
-  margin: 20px 0 40px 0
-  color: #FFFFFF
+  font-family: 'Lato Regular', sans-serif
+  font-size: 20px
+  line-height: 120%
+  letter-spacing: 0.02em
+  margin: 18px 0 44px 0
 
-@media screen and (max-width: 1280px)
-  .headline_1
-    font-size: 60px
+@media screen and (max-width: 1600px)
+  .content_1600
+    width: 100%
 
-  .title_1
-    font-size: 40px
+@media screen and (max-width: 1200px)
+  .content_1060
+    width: 800px
 
-  .body_1
-    font-size: 16px
-
-  .body_4
-    font-size: 16px
-
-  .body_5
-    font-size: 10px
+  .content_1600, .content_1060
+    padding: 0 60px
 
   .outcomes_h1
+    font-size: 60px
     padding-top: 66px
     padding-bottom: 46px
 
+  .outcomes_p
+    font-size: 16px
+
   .ceo_guide
     height: 146px
+
+  .ceo_h2
+    font-size: 16px
+
+  .steps
+    padding-top: 156px
+    padding-bottom: 152px
+    background-size: cover
+
+  .steps_h2
+    font-size: 40px
 
   .cases
     padding-top: 75px
     padding-bottom: 83px
 
   .cases_box
-    //width: 636px
-    margin: 64px auto 0 auto
+    margin-top: 64px
 
   .case
     width: 184px
     height: 262px
     padding: 9px 8px
+
+  .case_h6
+    font-size: 16px
+
+  .case_p
+    font-size: 10px
 
   .case_view
     h6
@@ -569,15 +681,152 @@
     a
       padding: 9px 14px
 
+  .app_list, .black_app_list
+    li
+      font-size: 16px
+
+  .daryou_info
+    max-width: 400px
+
+  .daryou_info_h2
+    font-size: 20px
+    margin: 29px 0
+
+  .daryou_gift
+    width: 131px
+    height: 123px
+    margin-top: 40px
+
+  .daryou_app
+    padding-top: 33px
+
+  .daryou_app_header
+    margin-left: 10px
+
+  .daryou_app_h2
+    font-size: 20px
+    margin-bottom: 3px
+
+  .daryou_app_p
+    font-size: 10px
+
+  .daryou_icon
+    width: 45px
+    height: 45px
+
+  .daryou_app_img
+    margin-top: 31px
+    width: 124px
+    height: 230px
+
+  .dragonoption_app
+    padding-top: 42px
+
+  .dragonoption_app_header
+    margin-left: 7px
+
+  .dragonoption_app_h2
+    font-size: 20px
+    margin-bottom: 3px
+
+  .dragonoption_app_p
+    font-size: 10px
+
+  .dragonoption_icon
+    width: 46px
+    height: 46px
+
+  .dragonoption_app_img
+    width: 262px
+    margin-left: -36px
+
+  .dragonoption_info_h2
+    font-size: 20px
+    margin: 28px 0
+
+  .dragonoption_bitcoin
+    width: 170px
+    height: 170px
+    margin-top: -20px
+
+  .loanstream_info_h2
+    font-size: 20px
+    margin: 31px 0 28px 0
+
+  .loanstream_app
+    width: 200px
+    padding-top: 33px
+
+  .loanstream_app_header
+    margin-left: 16px
+
+  .loanstream_app_h2
+    font-size: 20px
+    margin-bottom: 3px
+
+  .loanstream_app_p
+    font-size: 10px
+
+  .loanstream_icon
+    width: 53px
+    height: 45px
+
+  .loanstream_app_img
+    width: 263px
+    margin-top: auto
+    margin-left: -60px
+    margin-right: -30px
+
+  .insights
+    padding: 100px 0 123px 0
+
+  .full_insight:not(:last-child)
+    padding-bottom: 20px
+
+  .full_insight_img
+    width: 130px
+    height: 130px
+    margin-right: 15px
+
+  .full_insight_h5
+    font-size: 16px
+
+  .min_insight_h6
+    font-size: 10px
+
+  .full_insight_h3
+    font-size: 16px
+    padding: 20px 0 6px 0
+
+  .full_insight_p, .min_insight_h4
+    font-size: 14px
+
+  .questions
+    padding: 66px 0
+
+  .questions_h3
+    font-size: 20px
+    padding: 32px 0 18px 0
+
+  .become
+    padding: 37px 0
+
+  .become_h2
+    font-size: 28px
+
+  .become_b3
+    font-size: 16px
+    margin: 10px 0 30px 0
 
 @media screen and (max-width: 760px)
-  .headline_1
-    font-size: 36px
+  .content_1060
+    width: 100%
 
-  .title_1
-    font-size: 36px
+  .content_1600, .content_1060
+    padding: 0 16px
 
   .outcomes_h1
+    font-size: 36px
     padding-top: 30px
     padding-bottom: 24px
 
@@ -590,10 +839,12 @@
     justify-content: center
     img
       margin-right: 13px
-    h2
-      margin-right: 0
     button
       margin-top: 34px
+
+  .ceo_h2
+    margin-right: 0
+    font-size: 16px
 
   .steps
     padding-top: 152px
@@ -605,11 +856,126 @@
     padding-top: 16px
     font-size: 16px
 
-  .cases
-    justify-content: start
+  .cases_container
+    max-width: 100%
+    overflow-x: hidden
 
   .cases_box
-    width: 100%
-    margin: 40px 0 0 0
+    width: auto
+    margin-top: 40px
+    margin-left: -18px
+    margin-right: -18px
+    padding: 8px 0 24px 0
     justify-content: start
     overflow-x: scroll
+
+  .case
+    &:nth-child(3)
+      margin: 0 12px
+
+  .case_wrapper
+    display: block
+
+  .app_list, .black_app_list
+    li
+      font-family: 'Lato Light', sans-serif
+
+  .app_hover_btn
+    width: 50%
+
+  .app_container
+    flex-direction: column
+
+  .daryou, .dragonoption
+    max-width: 100%
+    overflow-x: hidden
+
+  .daryou_info
+    max-width: none
+
+  .daryou_info_h2, .dragonoption_info_h2, .loanstream_info_h2
+    margin: 23px 0 36px 0
+
+  .daryou_gift
+    width: 150px
+    height: 145px
+    margin: auto auto 0 40px
+
+  .daryou_app, .loanstream_app
+    margin: 0 auto
+
+  .daryou_app_img
+    width: 110px
+    height: 191px
+
+  .dragonoption_app
+    display: flex
+    flex-direction: column
+    align-items: center
+    order: 1
+
+  .dragonoption_info
+    order: 0
+
+  .dragonoption_app_img
+    width: 317px
+    margin-top: 5px
+    margin-left: 0
+
+  .dragonoption_bitcoin
+    margin-right: auto
+    margin-left: 40px
+
+  .loanstream_app_img
+    width: 232px
+    margin-top: 17px
+    margin-left: -25px
+
+  .insights_container
+    flex-direction: column
+
+  .insights_min
+    max-width: none
+    margin-top: 50px
+
+  .questions
+    padding: 20px 0 45px 0
+
+  .questions_h2
+    font-size: 28px
+    padding-bottom: 30px
+
+  .questions_list
+    li
+      font-family: 'Lato Light', sans-serif
+
+  .question_text
+    font-family: 'Lato Light', sans-serif
+
+  .question_img
+    display: none
+
+  .questions_h3
+    font-size: 20px
+    padding: 37px 0 20px 0
+
+  .become
+    padding: 27px 0 32px 0
+
+  .become_h2
+    font-size: 20px
+
+  .become_b3
+    font-family: 'Lato Light', sans-serif
+    margin: 6px 0 26px 0
+
+@media screen and (max-width: 460px)
+  .daryou_gift
+    margin: auto -50px -20px 0
+
+  .dragonoption_bitcoin
+    margin-right: -70px
+    margin-left: 0
+
+  .loanstream_info_lists
+    flex-direction: column
