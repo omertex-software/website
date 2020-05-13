@@ -10,16 +10,16 @@ const MobileMenu = ({ opened, reopenMobileMenu }) => (
       <Link to="/" className={style.mobile_logo} />
     </div>
     <div className={style.flow_column}>
-      <Link className={style.mobile_link} to="/">
+      <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>
         Services
       </Link>
-      <Link className={style.mobile_link} to="/">
+      <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>
         Insights
       </Link>
-      <Link className={style.mobile_link} to="/">
+      <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>
         About us
       </Link>
-      <Link className={style.mobile_link} to="/">
+      <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>
         Take a Quiz
       </Link>
     </div>
