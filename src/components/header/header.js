@@ -8,7 +8,7 @@ const Header = () => {
   // const [menuOpened, setMenuOpened] = useState(false)
 
   const listenScrollEvent = () => {
-    window.scrollY > 50 ? setChanged(true) : setChanged(false)
+    window.pageYOffset > 50 ? setChanged(true) : setChanged(false)
   }
 
   useEffect(() => {

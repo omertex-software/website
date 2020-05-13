@@ -538,7 +538,7 @@ export default () => {
                   className={style.full_insight_img}
                   alt="Post"
                 />
-                <div className={style.flow_column}>
+                <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
                   </div>
@@ -556,7 +556,7 @@ export default () => {
                   className={style.full_insight_img}
                   alt="Post"
                 />
-                <div className={style.flow_column}>
+                <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
                   </div>
@@ -574,7 +574,7 @@ export default () => {
                   className={style.full_insight_img}
                   alt="Post"
                 />
-                <div className={style.flow_column}>
+                <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
                   </div>

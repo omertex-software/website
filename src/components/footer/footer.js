@@ -19,7 +19,7 @@ const Footer = () => (
     className={classNames(style.section, style.justify_center, style.footer)}
   >
     <div className={classNames(style.content, style.footer_container)}>
-        <div className={classNames(style.footer_column, style.flow_column)}>
+        <div className={classNames(style.footer_column)}>
           <p className={style.footer_column_t4}>
             Lets build something great together
           </p>
@@ -42,7 +42,7 @@ const Footer = () => (
           </div>
         </div>
 
-        <div className={classNames(style.footer_column, style.flow_column)}>
+        <div className={classNames(style.footer_column)}>
           <p className={style.footer_column_t4}>Competense</p>
           <ul className={style.footer_column_links}>
             <li>
