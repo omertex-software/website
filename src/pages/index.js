@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
-import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 // import { bitrix24ContactForm } from "../helpers/bitrix24Scripts"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
 import buttons from "../assets/styles/buttons.module.sass"
 import style from "./index.module.sass"
 
@@ -17,15 +14,15 @@ import dragonoption_icon from "../assets/images/main/svg_icon_dragonoption.svg"
 import loanstream_icon from "../assets/images/main/png_icon_loanstream.png"
 import question from "../assets/images/main/svg_icon_question.svg"
 
-export const sharpImage = graphql`
-  fragment sharpImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1920) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-`
+import bitcoin from "../assets/images/main/png_img_bitcoin.png"
+import loanstream_app from "../assets/images/main/png_img_loanstream.png"
+import gift from "../assets/images/main/png_img_gift.png"
+import dragonoption_app from "../assets/images/main/png_img_dragonoption.png"
+import idea from "../assets/images/main/png_icon_idea.png"
+import steps from "../assets/images/main/png_icon_steps.png"
+import ways from "../assets/images/main/png_icon_ways.png"
+import daryou_app from "../assets/images/main/png_img_daryou.png"
+import post from "../assets/images/main/png_img_insight.png"
 
 export default () => {
   // const [contactForm, setContactForm] = useState()
@@ -48,48 +45,6 @@ export default () => {
     }
   }
 
-  const images = useStaticQuery(graphql`
-    query {
-      become: file(relativePath: { eq: "main/become_bg.png" }) {
-        ...sharpImage
-      }
-      tangible: file(relativePath: { eq: "main/tangible_outcomes_bg.jpg" }) {
-        ...sharpImage
-      }
-      bitcoin: file(relativePath: { eq: "main/png_img_bitcoin.png" }) {
-        ...sharpImage
-      }
-      loanstream_app: file(
-        relativePath: { eq: "main/png_img_loanstream.png" }
-      ) {
-        ...sharpImage
-      }
-      gift: file(relativePath: { eq: "main/png_img_gift.png" }) {
-        ...sharpImage
-      }
-      dragonoption_app: file(
-        relativePath: { eq: "main/png_img_dragonoption.png" }
-      ) {
-        ...sharpImage
-      }
-      idea: file(relativePath: { eq: "main/png_icon_idea.png" }) {
-        ...sharpImage
-      }
-      steps: file(relativePath: { eq: "main/png_icon_steps.png" }) {
-        ...sharpImage
-      }
-      ways: file(relativePath: { eq: "main/png_icon_ways.png" }) {
-        ...sharpImage
-      }
-      daryou_app: file(relativePath: { eq: "main/png_img_daryou.png" }) {
-        ...sharpImage
-      }
-      post: file(relativePath: { eq: "main/png_img_insight.png" }) {
-        ...sharpImage
-      }
-    }
-  `)
-
   return (
     <Layout>
       <Helmet
@@ -97,14 +52,12 @@ export default () => {
         charSet="utf-8"
         defer={false}
       />
-      <BackgroundImage
-        Tag="section"
+      <section
         className={classNames(
           style.section,
           style.justify_center,
           style.outcomes
         )}
-        fluid={images.tangible.childImageSharp.fluid}
       >
         <div className={classNames(style.content_1600, style.flow_column)}>
           <div className={style.outcomes_info}>
@@ -125,7 +78,7 @@ export default () => {
             <img height="26" src={arrows} alt="Arrows icon" />
           </div>
         </div>
-      </BackgroundImage>
+      </section>
       <section
         className={classNames(
           style.section,
@@ -179,8 +132,8 @@ export default () => {
             <div className={style.case_wrapper} />
             <div className={style.case} onClick={e => showCase(e)}>
               <div className={style.case_view}>
-                <Img
-                  fluid={images.ways.childImageSharp.fluid}
+                <img
+                  src={ways}
                   className={style.case_view_img}
                   alt="Ways con"
                 />
@@ -217,8 +170,8 @@ export default () => {
             </div>
             <div className={style.case} onClick={e => showCase(e)}>
               <div className={style.case_view}>
-                <Img
-                  fluid={images.steps.childImageSharp.fluid}
+                <img
+                  src={steps}
                   className={style.case_view_img}
                   alt="Steps icon"
                 />
@@ -259,8 +212,8 @@ export default () => {
             </div>
             <div className={style.case} onClick={e => showCase(e)}>
               <div className={style.case_view}>
-                <Img
-                  fluid={images.idea.childImageSharp.fluid}
+                <img
+                  src={idea}
                   className={style.case_view_img}
                   alt="Steps icon"
                 />
@@ -334,11 +287,7 @@ export default () => {
                 <li>Idea validation</li>
                 <li>Proof of concept</li>
               </ul>
-              <Img
-                fluid={images.gift.childImageSharp.fluid}
-                className={style.daryou_gift}
-                alt="Gift"
-              />
+              <img src={gift} className={style.daryou_gift} alt="Gift" />
             </div>
           </div>
           <div className={style.daryou_app}>
@@ -360,8 +309,8 @@ export default () => {
               </div>
             </div>
             <div className={style.justify_center}>
-              <Img
-                fluid={images.daryou_app.childImageSharp.fluid}
+              <img
+                src={daryou_app}
                 className={style.daryou_app_img}
                 alt="Daryou app"
               />
@@ -410,8 +359,8 @@ export default () => {
               </div>
             </div>
             <div className={style.justify_center}>
-              <Img
-                fluid={images.dragonoption_app.childImageSharp.fluid}
+              <img
+                src={dragonoption_app}
                 className={style.dragonoption_app_img}
                 alt="Dragonoption app"
               />
@@ -429,8 +378,8 @@ export default () => {
                 <li>Product prototyping</li>
                 <li>Information architecture</li>
               </ul>
-              <Img
-                fluid={images.bitcoin.childImageSharp.fluid}
+              <img
+                src={bitcoin}
                 className={style.dragonoption_bitcoin}
                 alt="Bitcoin"
               />
@@ -510,8 +459,8 @@ export default () => {
                 </p>
               </div>
             </div>
-            <Img
-              fluid={images.loanstream_app.childImageSharp.fluid}
+            <img
+              src={loanstream_app}
               className={style.loanstream_app_img}
               alt={"Loanstream app"}
             />
@@ -533,11 +482,7 @@ export default () => {
           <div className={classNames(style.insights_container, style.around)}>
             <div className={classNames(style.flow_column, style.insights_full)}>
               <div className={classNames(style.full_insight, style.flex)}>
-                <Img
-                  fluid={images.post.childImageSharp.fluid}
-                  className={style.full_insight_img}
-                  alt="Post"
-                />
+                <img src={post} className={style.full_insight_img} alt="Post" />
                 <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
@@ -551,11 +496,7 @@ export default () => {
                 </div>
               </div>
               <div className={classNames(style.full_insight, style.flex)}>
-                <Img
-                  fluid={images.post.childImageSharp.fluid}
-                  className={style.full_insight_img}
-                  alt="Post"
-                />
+                <img src={post} className={style.full_insight_img} alt="Post" />
                 <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
@@ -569,11 +510,7 @@ export default () => {
                 </div>
               </div>
               <div className={classNames(style.full_insight, style.flex)}>
-                <Img
-                  fluid={images.post.childImageSharp.fluid}
-                  className={style.full_insight_img}
-                  alt="Post"
-                />
+                <img src={post} className={style.full_insight_img} alt="Post" />
                 <div>
                   <div>
                     <p className={style.full_insight_h5}>Launch</p>
@@ -742,14 +679,12 @@ export default () => {
           </div>
         </div>
       </section>
-      <BackgroundImage
-        Tag="section"
+      <section
         className={classNames(
           style.section,
           style.justify_center,
           style.become
         )}
-        fluid={images.become.childImageSharp.fluid}
       >
         <div
           className={classNames(
@@ -770,7 +705,7 @@ export default () => {
             <button className={buttons.btn_dark}>become a client</button>
           </div>
         </div>
-      </BackgroundImage>
+      </section>
       {/*{contactForm}*/}
     </Layout>
   )

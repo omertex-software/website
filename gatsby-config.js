@@ -1,5 +1,3 @@
-const path = require(`path`)
-
 module.exports = {
   siteMetadata: {
     siteUrl: `https://omertex-website.herokuapp.com/`,
@@ -17,26 +15,18 @@ module.exports = {
         display: `standalone`,
         include_favicon: true,
         icon: "src/assets/images/common/logo_512.png",
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `assets`, `images`),
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
+      resolve: "gatsby-plugin-offline",
       options: {
         workboxConfig: {
-          globPatterns: ['**/*']
-        }
-      }
+          globPatterns: ["**/*"],
+        },
+      },
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
   ],
 }
