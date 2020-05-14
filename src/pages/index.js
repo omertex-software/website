@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { bitrix24ContactForm } from "../helpers/bitrix24Scripts"
+// import { bitrix24ContactForm } from "../helpers/bitrix24Scripts"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
@@ -28,11 +28,11 @@ export const sharpImage = graphql`
 `
 
 export default () => {
-  const [contactForm, setContactForm] = useState()
+  // const [contactForm, setContactForm] = useState()
 
-  useEffect(() => {
-    bitrix24ContactForm(setContactForm)
-  }, [])
+  // useEffect(() => {
+  //   bitrix24ContactForm(setContactForm)
+  // }, [])
 
   const showCase = e => {
     e.currentTarget.className === classNames(style.case, style.show_case)
@@ -771,7 +771,7 @@ export default () => {
           </div>
         </div>
       </BackgroundImage>
-      {contactForm}
+      {/*{contactForm}*/}
     </Layout>
   )
 }
