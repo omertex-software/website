@@ -1,4 +1,6 @@
 .slick-list
+  width: 104% !important
+  margin-left: -20px !important
   padding: 10px 0 25px 0 !important
 
 .slick-slider
@@ -6,7 +8,7 @@
 
 .slick-slide
   width: auto !important
-  &:nth-child(2)
+  &:nth-child(1), &:nth-child(3)
     margin: 0 20px !important
 
 .slick-dots
@@ -24,8 +26,11 @@
 
 @media screen and (max-width: 760px)
   .slick-list
+    margin-left: -12px !important
     padding: 8px 0 24px 0 !important
 
   .slick-slide
+    &:nth-child(1), &:nth-child(3)
+      margin: 0 !important
     &:nth-child(2)
       margin: 0 12px !important
