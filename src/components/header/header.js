@@ -8,19 +8,21 @@ const Header = () => {
   const [changed, setChanged] = useState(false)
   const [menuOpened, setMenuOpened] = useState(false)
 
-  const listenScrollEvent = () => {
-    window.pageYOffset > 50 ? setChanged(true) : setChanged(false)
-  }
-
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
     return () => window.removeEventListener("scroll", listenScrollEvent)
   }, [])
 
+  const listenScrollEvent = () => {
+    window.pageYOffset > 50 ? setChanged(true) : setChanged(false)
+  }
+
+  useEffect(() => {
+    menuOpened && (document.body.style.overflow = 'hidden')
+    !menuOpened && (document.body.style.overflow = 'unset');
+  }, [menuOpened]);
+
   const reopenMobileMenu = () => {
-    !menuOpened
-      ? (document.body.style = "overflow: hidden")
-      : (document.body.style = "overflow: auto")
     setMenuOpened(!menuOpened)
   }
 

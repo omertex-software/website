@@ -1,0 +1,214 @@
+.content_1600
+  width: 1600px
+  padding: 0 70px
+
+.content_1060
+  width: 1060px
+  padding: 0 70px
+
+.section
+  width: 100%
+
+.flex
+  display: flex
+
+.justify_center
+  display: flex
+  justify-content: center
+
+.align_center
+  display: flex
+  align-items: center
+
+.between
+  display: flex
+  justify-content: space-between
+
+.around
+  display: flex
+  justify-content: space-around
+
+.flow_column
+  display: flex
+  flex-flow: column
+
+.cases
+  background-color: #FAFAFA
+  padding-top: 126px
+  padding-bottom: 142px
+
+.cases_h2
+  max-width: 540px
+  font-family: 'Lato', sans-serif
+  font-weight: 900
+  font-size: 40px
+  line-height: 120%
+  letter-spacing: 0.02em
+  padding-bottom: 11px
+
+.cases_p
+  font-family: 'Lato', sans-serif
+  font-weight: 500
+  font-size: 30px
+  line-height: 120%
+  letter-spacing: 0.02em
+
+.cases_box
+  display: flex
+  justify-content: center
+  margin-top: 96px
+
+.case
+  width: 300px
+  height: 433px
+  padding: 20px
+  background: #FFFFFF
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08)
+  border-radius: 8px
+  flex-shrink: 0
+  cursor: pointer
+  &:nth-child(3)
+    margin: 0 22px
+  &:hover
+    box-shadow: 0 0 0 2px #A8BDE5
+  &:active
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+
+.case_h6
+  width: 100%
+  font-family: 'Lato', sans-serif
+  font-weight: 500
+  font-size: 24px
+  line-height: 140%
+  letter-spacing: 0.02em
+
+.case_p
+  font-family: 'Lato', sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 140%
+  letter-spacing: 0.02em
+
+.case_view
+  opacity: 1
+  height: inherit
+  display: flex
+  flex-flow: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  transition: opacity ease-in-out 0.3s
+  -webkit-transition: opacity ease-in-out 0.3s
+  -moz-transition: opacity ease-in-out 0.3s
+
+.case_view_img
+  width: 227px
+  height: 227px
+  margin-bottom: 15%
+
+.case_description
+  opacity: 0
+  width: 0
+  height: 0
+  position: absolute
+  overflow-y: hidden
+  transition: opacity ease-in-out 0.3s
+  -webkit-transition: opacity ease-in-out 0.3s
+  -moz-transition: opacity ease-in-out 0.3s
+  h6
+    margin-bottom: 10px
+
+.case_wrapper
+  display: none
+  width: 18px
+  flex-shrink: 0
+
+.show_case
+  .case_description
+    opacity: 1
+    width: auto
+    height: inherit
+    position: relative
+  .case_view
+    opacity: 0
+    width: 0
+    height: 0
+    position: absolute
+    overflow-y: hidden
+
+.case_description_btn
+  margin-top: auto
+
+@media screen and (max-width: 1600px)
+  .content_1600
+    width: 100%
+
+@media screen and (max-width: 1280px)
+  .content_1060
+    width: 800px
+
+  .content_1600, .content_1060
+    padding: 0 60px
+
+  .cases
+    padding-top: 75px
+    padding-bottom: 83px
+
+  .cases_box
+    margin-top: 64px
+
+  .case
+    width: 184px
+    height: 262px
+    padding: 9px 8px
+
+  .case_h6
+    font-size: 16px
+
+  .case_p
+    font-size: 10px
+
+  .case_view
+    h6
+      max-width: 160px
+
+  .case_view_img
+    width: 125px
+    height: 125px
+
+  .case_description
+    h6
+      margin-bottom: 4px
+    a
+      padding: 9px 14px
+
+@media screen and (max-width: 760px)
+  .content_1060
+    width: 100%
+
+  .content_1600, .content_1060
+    padding: 0 16px
+
+  .cases_container
+    max-width: 100%
+    overflow-x: hidden
+
+  .cases_box
+    width: auto
+    margin-top: 40px
+    margin-left: -18px
+    margin-right: -18px
+    padding: 8px 0 24px 0
+    justify-content: start
+    //scroll-snap-type: x mandatory
+    //-webkit-overflow-scrolling: touch
+    overflow-x: scroll
+  //& > *
+  //  scroll-snap-align: start
+
+  .case
+    &:nth-child(3)
+      margin: 0 12px
+
+  .case_wrapper
+    display: block
