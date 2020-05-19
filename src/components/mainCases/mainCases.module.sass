@@ -35,7 +35,7 @@
 .cases
   background-color: #FAFAFA
   padding-top: 126px
-  padding-bottom: 142px
+  padding-bottom: 117px
 
 .cases_h2
   max-width: 540px
@@ -53,13 +53,15 @@
   line-height: 120%
   letter-spacing: 0.02em
 
+.cases_container
+  max-width: 100%
+  overflow-x: hidden
+
 .cases_box
-  display: flex
-  justify-content: center
-  margin-top: 96px
+  margin-top: 86px
 
 .case
-  width: 300px
+  width: 300px !important
   height: 433px
   padding: 20px
   background: #FFFFFF
@@ -67,8 +69,6 @@
   border-radius: 8px
   flex-shrink: 0
   cursor: pointer
-  &:nth-child(3)
-    margin: 0 22px
   &:hover
     box-shadow: 0 0 0 2px #A8BDE5
   &:active
@@ -118,11 +118,6 @@
   h6
     margin-bottom: 10px
 
-.case_wrapper
-  display: none
-  width: 18px
-  flex-shrink: 0
-
 .show_case
   .case_description
     opacity: 1
@@ -152,13 +147,13 @@
 
   .cases
     padding-top: 75px
-    padding-bottom: 83px
+    padding-bottom: 58px
 
   .cases_box
-    margin-top: 64px
+    margin-top: 54px
 
   .case
-    width: 184px
+    width: 184px !important
     height: 262px
     padding: 9px 8px
 
@@ -189,26 +184,23 @@
   .content_1600, .content_1060
     padding: 0 16px
 
+  .cases
+    padding-top: 41px
+    padding-bottom: 49px
+
+  .cases_h2
+    font-size: 28px
+    padding-bottom: 8px
+
+  .cases_p
+    font-size: 20px
+
   .cases_container
     max-width: 100%
     overflow-x: hidden
 
   .cases_box
     width: auto
-    margin-top: 40px
+    margin-top: 24px
     margin-left: -18px
     margin-right: -18px
-    padding: 8px 0 24px 0
-    justify-content: start
-    //scroll-snap-type: x mandatory
-    //-webkit-overflow-scrolling: touch
-    overflow-x: scroll
-  //& > *
-  //  scroll-snap-align: start
-
-  .case
-    &:nth-child(3)
-      margin: 0 12px
-
-  .case_wrapper
-    display: block

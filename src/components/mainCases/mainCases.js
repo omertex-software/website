@@ -1,9 +1,13 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import style from "./mainCases.module.sass"
 import classNames from "../../helpers/classNames"
 import Img from "gatsby-image"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import buttons from "../../assets/styles/buttons.module.sass"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import '../../assets/styles/mainCasesSlick.sass'
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -16,56 +20,11 @@ export const sharpImage = graphql`
 `
 
 const MainCases = () => {
-  const casesBoxRef = useRef()
-  // const [windowWidth, setWindowWidth] = useState(0)
-  // const [casesScroll, setCasesScroll] = useState(0)
-
-  // useEffect(() => {
-  //   const getWidth = () => {
-  //     setWindowWidth(window.innerWidth)
-  //   }
-  //   window.addEventListener("resize", getWidth)
-  //   getWidth()
-  //   return () => window.removeEventListener("resize", getWidth)
-  // }, [])
-  //
-  // useEffect(() => {
-  //   const getScroll = () => {
-  //     setCasesScroll(casesBoxRef.current.scrollLeft)
-  //   }
-  //   casesBoxRef.current.addEventListener("scroll", getScroll)
-  //   getScroll()
-  //   return () => casesBoxRef.current.removeEventListener("scroll", getScroll)
-  // }, [])
-
   const showCase = e => {
     e.currentTarget.className === classNames(style.case, style.show_case)
       ? (e.currentTarget.className = classNames(style.case))
       : (e.currentTarget.className = classNames(style.case, style.show_case))
   }
-
-  // const casesDots = () => {
-  //   let dotsCount = 0
-  //   let scroll = (casesScroll / 312) * 100
-  //   let wind0 = (5 / 100) * (windowWidth - 312)
-  //
-  //   let wind1 = (9 / 100) * (windowWidth - 312)
-  //   let wind2 = (6 / 100) * (windowWidth - 312)
-  //   let wind3 = (8 / 100) * (windowWidth - 312)
-  //   if (windowWidth < 600 && windowWidth > 552) {
-  //     dotsCount = 2
-  //     console.log(scroll < wind0)
-  //   }
-  //   if (windowWidth < 550) {
-  //     dotsCount = 3
-  //     console.log("1", scroll < wind2)
-  //     console.log("2", scroll > wind2 && scroll < wind3)
-  //     console.log("3", scroll > wind3)
-  //   }
-  //   // console.log(dotsCount)
-  // }
-  //
-  // casesDots()
 
   const images = useStaticQuery(graphql`
     query {
@@ -81,6 +40,25 @@ const MainCases = () => {
     }
   `)
 
+  const settings = {
+    slidesToShow: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 760,
+        settings: {
+          infinite: false,
+          dots: true,
+          arrows: false,
+          settings: "slick",
+          slidesToShow: 1,
+          variableWidth: true,
+          centerMode: true
+        }
+      }
+    ]
+  };
+
   return (
     <section
       className={classNames(style.section, style.justify_center, style.cases)}
@@ -90,11 +68,10 @@ const MainCases = () => {
           Three cases when you need a software product.
         </h2>
         <p className={style.cases_p}>Choose your one.</p>
-        <div
-          ref={casesBoxRef}
+        <Slider
           className={classNames(style.section, style.cases_box)}
+          {...settings}
         >
-          <div className={style.case_wrapper} />
           <div className={style.case} onClick={e => showCase(e)}>
             <div className={style.case_view}>
               <Img
@@ -201,9 +178,7 @@ const MainCases = () => {
               </div>
             </div>
           </div>
-          <div className={style.case_wrapper} />
-        </div>
-        {/*{casesDots}*/}
+        </Slider>
       </div>
     </section>
   )
