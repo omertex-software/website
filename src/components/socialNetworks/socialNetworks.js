@@ -20,16 +20,19 @@ const SocialNetworks = () => {
       <a
         className={style.social_whatsapp}
         target="_blank"
+        rel="noopener noreferrer"
         href="https://wa.me/375296524258"
       />
       <a
         className={style.social_telegram}
         target="_blank"
+        rel="noopener noreferrer"
         href="https://t.me/promaker1"
       />
       <a
         className={style.social_facebook}
         target="_blank"
+        rel="noopener noreferrer"
         href="http://m.me/dkhanevich"
       />
       <button className={style.social_message} onClick={changeOpened} />

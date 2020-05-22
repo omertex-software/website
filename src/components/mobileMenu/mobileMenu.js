@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import classNames from "../../helpers/classNames"
 import style from "./mobileMenu.module.sass"
 import { Link } from "gatsby"

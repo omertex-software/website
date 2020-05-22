@@ -18,9 +18,9 @@ const Header = () => {
   }
 
   useEffect(() => {
-    menuOpened && (document.body.style.overflow = 'hidden')
-    !menuOpened && (document.body.style.overflow = 'unset');
-  }, [menuOpened]);
+    menuOpened && (document.body.style.overflow = "hidden")
+    !menuOpened && (document.body.style.overflow = "unset")
+  }, [menuOpened])
 
   const reopenMobileMenu = () => {
     setMenuOpened(!menuOpened)
@@ -60,7 +60,10 @@ const Header = () => {
         >
           <Link to="/" className={style.company_logo} />
           <div className={classNames(style.header_menu, style.align_center)}>
-            <Link className={style.header_menu_link} to="/">
+            <Link
+              className={style.header_menu_link}
+              to="/сross-platform-mobile-app-development"
+            >
               Services
             </Link>
             <Link className={style.header_menu_link} to="/">
