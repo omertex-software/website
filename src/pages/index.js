@@ -116,26 +116,6 @@ export default () => {
         </div>
       </BackgroundImage>
       <section
-        className={classNames(
-          style.section,
-          style.justify_center,
-          style.align_center,
-          style.ceo_guide
-        )}
-      >
-        <div
-          className={classNames(style.content_1060, style.ceo_guide_container)}
-        >
-          <div className={style.align_center}>
-            <img src={pdf} alt="PDF icon" />
-            <h2 className={style.ceo_h2}>
-              The CEO guide to Building an Outstanding Software Product
-            </h2>
-          </div>
-          <button className={buttons.btn_dark}>Download the insight</button>
-        </div>
-      </section>
-      <section
         className={classNames(style.section, style.justify_center, style.steps)}
       >
         <div className={style.content_1060}>
@@ -154,6 +134,16 @@ export default () => {
           <p className={classNames(style.steps_p, style.steps_final_step)}>
             Together with you the every step of the way
           </p>
+          <div className={style.steps_wrapper} />
+          <div className={style.ceo_guide}>
+            <div className={style.align_center}>
+              <img src={pdf} alt="PDF icon" />
+              <h2 className={style.ceo_h2}>
+                The CEO guide to Building an Outstanding Software Product
+              </h2>
+            </div>
+            <button className={buttons.btn_dark}>Download the insight</button>
+          </div>
         </div>
       </section>
       <MainCases />
@@ -164,18 +154,6 @@ export default () => {
           style.daryou
         )}
       >
-        <div className={style.app_hover_content}>
-          <Link
-            className={classNames(
-              style.app_hover_btn_right,
-              style.justify_center,
-              style.align_center
-            )}
-            to="/"
-          >
-            request the case study
-          </Link>
-        </div>
         <div className={classNames(style.content_1060, style.app_container)}>
           <div className={style.daryou_info}>
             <h2 className={style.daryou_info_h2}>
@@ -183,17 +161,28 @@ export default () => {
               competative market?
             </h2>
             <div className={style.between}>
-              <ul className={style.app_list}>
-                <li>Competitors research</li>
-                <li>Customer research</li>
-                <li>User journey research</li>
-                <li>
-                  Customer value proposition <br />
-                  analysis
-                </li>
-                <li>Idea validation</li>
-                <li>Proof of concept</li>
-              </ul>
+              <div className={style.flow_column}>
+                <ul className={style.app_list}>
+                  <li>Competitors research</li>
+                  <li>Customer research</li>
+                  <li>User journey research</li>
+                  <li>
+                    Customer value proposition <br />
+                    analysis
+                  </li>
+                  <li>Idea validation</li>
+                  <li>Proof of concept</li>
+                </ul>
+                <Link
+                  className={classNames(
+                    buttons.btn_dark,
+                    style.app_request_btn
+                  )}
+                  to="/"
+                >
+                  request the case study
+                </Link>
+              </div>
               <Img
                 fluid={images.gift.childImageSharp.fluid}
                 className={style.daryou_gift}
@@ -236,18 +225,6 @@ export default () => {
           style.dragonoption
         )}
       >
-        <div className={style.app_hover_content}>
-          <Link
-            className={classNames(
-              style.app_hover_btn_left,
-              style.justify_center,
-              style.align_center
-            )}
-            to="/"
-          >
-            request the case study
-          </Link>
-        </div>
         <div className={classNames(style.content_1060, style.app_container)}>
           <div className={style.dragonoption_app}>
             <div className={style.flex}>
@@ -283,12 +260,23 @@ export default () => {
               experience and emerging technology
             </h2>
             <div className={style.between}>
-              <ul className={style.black_app_list}>
-                <li>User Experience design</li>
-                <li>User interface design</li>
-                <li>Product prototyping</li>
-                <li>Information architecture</li>
-              </ul>
+              <div className={style.flow_column}>
+                <ul className={style.black_app_list}>
+                  <li>User Experience design</li>
+                  <li>User interface design</li>
+                  <li>Product prototyping</li>
+                  <li>Information architecture</li>
+                </ul>
+                <Link
+                  className={classNames(
+                    buttons.btn_dark,
+                    style.app_request_btn
+                  )}
+                  to="/"
+                >
+                  request the case study
+                </Link>
+              </div>
               <Img
                 fluid={images.bitcoin.childImageSharp.fluid}
                 className={style.dragonoption_bitcoin}
@@ -305,49 +293,45 @@ export default () => {
           style.loanstream
         )}
       >
-        <div className={style.app_hover_content}>
-          <Link
-            className={classNames(
-              style.app_hover_btn_right,
-              style.justify_center,
-              style.align_center
-            )}
-            to="/"
-          >
-            request the case study
-          </Link>
-        </div>
         <div className={classNames(style.content_1060, style.app_container)}>
           <div className={style.loanstream_info}>
             <h2 className={style.loanstream_info_h2}>
               When the product is so complex and expensive that the only way to
               launch it is to split it into MVP and futher deliverables.
             </h2>
-            <div className={style.loanstream_info_lists}>
-              <ul className={style.app_list}>
-                <li>
-                  Mininum viable product <br /> (MVP) development
-                </li>
-                <li>Website development</li>
-                <li>Mobile app development</li>
-                <li>App store publishing</li>
-                <li>
-                  Front-end <br />
-                  development
-                </li>
-              </ul>
-              <ul className={style.app_list}>
-                <li>
-                  Back-end <br />
-                  development
-                </li>
-                <li>
-                  API Integration <br />
-                  (payments, analytics, <br />
-                  VoIP, etc.)
-                </li>
-                <li>Proof of concept</li>
-              </ul>
+            <div className={style.flow_column}>
+              <div className={style.loanstream_info_lists}>
+                <ul className={style.app_list}>
+                  <li>
+                    Mininum viable product <br /> (MVP) development
+                  </li>
+                  <li>Website development</li>
+                  <li>Mobile app development</li>
+                  <li>App store publishing</li>
+                  <li>
+                    Front-end <br />
+                    development
+                  </li>
+                </ul>
+                <ul className={style.app_list}>
+                  <li>
+                    Back-end <br />
+                    development
+                  </li>
+                  <li>
+                    API Integration <br />
+                    (payments, analytics, <br />
+                    VoIP, etc.)
+                  </li>
+                  <li>Proof of concept</li>
+                </ul>
+              </div>
+              <Link
+                className={classNames(buttons.btn_dark, style.app_request_btn)}
+                to="/"
+              >
+                request the case study
+              </Link>
             </div>
           </div>
           <div className={style.loanstream_app}>
