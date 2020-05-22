@@ -121,7 +121,7 @@ import React from "react"
 // }
 // `
 
-export const bitrix24ContactForm = cb => {
+const bitrix24ContactForm = (data, cb) => {
   const w = window
   const d = document
   const u = "https://omertex.bitrix24.by/bitrix/js/crm/form_loader.js"
@@ -142,7 +142,31 @@ export const bitrix24ContactForm = cb => {
 
   return cb(
     <script id="bx24_form_inline" data-skip-moving="true">
-      {window.b24form({ id: "10", lang: "ru", sec: "qf6dob", type: "inline" })}
+      {window.b24form(data)}
     </script>
+  )
+}
+
+export const bitrix24ContactFormPopUp = cb => {
+  return bitrix24ContactForm(
+    {
+      id: "10",
+      lang: "ru",
+      sec: "qf6dob",
+      type: "inline",
+    },
+    cb
+  )
+}
+
+export const bitrix24ContactFormIntegrable = cb => {
+  return bitrix24ContactForm(
+    {
+      id: "12",
+      lang: "ru",
+      sec: "dr375t",
+      type: "inline",
+    },
+    cb
   )
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import style from "./cross-platform-mobile-app-development.module.sass"
+import { bitrix24ContactFormIntegrable } from "../helpers/bitrix24Scripts"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -18,6 +19,12 @@ export const sharpImage = graphql`
 `
 
 export default () => {
+  const [contactForm, setContactForm] = useState()
+
+  useEffect(() => {
+    bitrix24ContactFormIntegrable(setContactForm)
+  }, [])
+
   const images = useStaticQuery(graphql`
     query {
       header_bg: file(relativePath: { eq: "cpmad/cpmad-bg.jpg" }) {
@@ -619,7 +626,7 @@ export default () => {
         )}
       >
         <div className={style.content}>
-          <h2 className={style.seventh_section_h2}>
+          <h2 className={style.eighth_section_h2}>
             Why should you choose <br /> Omertex for cross-platform <br /> app
             development?
           </h2>
@@ -664,6 +671,38 @@ export default () => {
                 absolutely reliable and user-friendly.
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        className={classNames(
+          style.section,
+          style.justify_center,
+          style.ninth_section
+        )}
+      >
+        <div className={style.content}>
+          <h2 className={style.ninth_section_h2}>
+            Want to hire cross-platform <br /> app developers or get <br />a
+            consultation?
+          </h2>
+          <div className={style.ninth_form_box}>
+            <div className={style.ninth_form_column}>
+              <h3 className={style.ninth_section_h3}>
+                Want to hire cross-platform app developers or get a
+                consultation?
+              </h3>
+              <p className={style.ninth_section_p}>
+                Ask an Omertex expert how we can help.
+                <br /> <br />
+                Find out how Omertex can drive actionable insights and
+                streamline workflows, so you can deliver results.
+                <br /> <br />
+                Explore life at Omertex, learn about available careers, or get
+                in touch with an Omertex representative.
+              </p>
+            </div>
+            <div className={style.ninth_form_column}>{contactForm}</div>
           </div>
         </div>
       </div>
