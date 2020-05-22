@@ -62,7 +62,7 @@ const Header = () => {
           <div className={classNames(style.header_menu, style.align_center)}>
             <Link
               className={style.header_menu_link}
-              to="/сross-platform-mobile-app-development"
+              to="/cross-platform-mobile-app-development"
             >
               Services
             </Link>

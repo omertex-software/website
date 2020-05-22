@@ -10,7 +10,11 @@ const MobileMenu = ({ opened, reopenMobileMenu }) => (
       <Link to="/" className={style.mobile_logo} />
     </div>
     <div className={style.flow_column}>
-      <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>
+      <Link
+        className={style.mobile_link}
+        to="/cross-platform-mobile-app-development"
+        onClick={reopenMobileMenu}
+      >
         Services
       </Link>
       <Link className={style.mobile_link} to="/" onClick={reopenMobileMenu}>

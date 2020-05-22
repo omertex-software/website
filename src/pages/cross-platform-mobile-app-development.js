@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
-import style from "./сross-platform-mobile-app-development.module.sass"
+import style from "./cross-platform-mobile-app-development.module.sass"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
