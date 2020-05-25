@@ -17,7 +17,7 @@ module.exports = {
         display: `standalone`,
         include_favicon: true,
         icon: "src/assets/images/common/logo_512.png",
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,12 +27,23 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
+      resolve: "gatsby-plugin-offline",
       options: {
         workboxConfig: {
-          globPatterns: ['**/*']
-        }
-      }
+          globPatterns: ["**/*"],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`,
+            variants: [`300`, `400`, `700`, `900`],
+          },
+        ],
+      },
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
