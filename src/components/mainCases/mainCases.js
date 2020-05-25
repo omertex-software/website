@@ -88,12 +88,11 @@ const MainCases = () => {
             >
               <h6 className={style.case_h6}>You owe an ongoing business</h6>
               <p className={style.case_p}>
-                &ensp; Sooner or later the necessity to reduce fixed and
-                operational costs becomes vital for every growing business.
-                <br /> &ensp; Sooner or later the necessity to increase revenue
-                becomes vital for every growing business.
-                <br /> &ensp; In era of digitl transformation both cases are
-                often solved thriug the development of software products
+                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
+                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
+                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
+                vehicula purus adipiscing massa.
               </p>
               <div
                 className={classNames(
@@ -125,14 +124,11 @@ const MainCases = () => {
                 You’re looking to launch <br /> a new business
               </h6>
               <p className={style.case_p}>
-                &ensp; There are other companies/services out of there.
-                <br /> &ensp; And the service they provide to their customers is
-                in some way similar to what you’re going to offer to your
-                customers.
-                <br /> &ensp; So the main question is: How to build a good
-                product to increase the chances for succes?
-                <br /> &ensp; We can study their products and business models to
-                find out in which way to make your product
+                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
+                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
+                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
+                vehicula purus adipiscing massa.
               </p>
               <div
                 className={classNames(
@@ -162,9 +158,11 @@ const MainCases = () => {
             >
               <h6 className={style.case_h6}>You have a startup idea</h6>
               <p className={style.case_p}>
-                &ensp; It’s not clear does it worth to invest into it.
-                <br /> &ensp; The development of a new software product is
-                rather expensive but the uncertantiy it will succes is so high.
+                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
+                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
+                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
+                vehicula purus adipiscing massa.
               </p>
               <div
                 className={classNames(
