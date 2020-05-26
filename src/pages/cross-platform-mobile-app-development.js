@@ -96,6 +96,9 @@ export default () => {
       ) {
         ...sharpImage
       }
+      form_bg: file(relativePath: { eq: "cpmad/form_bg.png" }) {
+        ...sharpImage
+      }
     }
   `)
 
@@ -733,12 +736,14 @@ export default () => {
           </div>
         </div>
       </div>
-      <div
+      <BackgroundImage
+        Tag="section"
         className={classNames(
           style.section,
           style.justify_center,
           style.ninth_section
         )}
+        fluid={images.form_bg.childImageSharp.fluid}
       >
         <div className={style.content}>
           <h2 className={classNames(style.ninth_section_h2, style.title_1)}>
@@ -751,7 +756,7 @@ export default () => {
                 Want to hire cross-platform app developers or get a
                 consultation?
               </h3>
-              <p className={classNames(style.ninth_section_p, style.body_3s)}>
+              <p className={classNames(style.ninth_section_p, style.body_3)}>
                 Ask an Omertex expert how we can help.
                 <br /> <br />
                 Find out how Omertex can drive actionable insights and
@@ -764,7 +769,7 @@ export default () => {
             <div className={style.ninth_form_column}>{contactForm}</div>
           </div>
         </div>
-      </div>
+      </BackgroundImage>
     </Layout>
   )
 }
