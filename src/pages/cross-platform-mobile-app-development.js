@@ -126,10 +126,9 @@ export default () => {
             What is a cross-platform app?
           </p>
           <p className={classNames(style.page_header_p, style.body_1)}>
-            What is a cross-platform app?A cross-platform mobile application is
-            the one that can run on both Android and iOS mobile phones.
-            Cross-platform apps fall into the category of hybrid mobile apps and
-            web-based or mobile web apps.
+            A cross-platform mobile application is the one that can run on both
+            Android and iOS mobile phones. Cross-platform apps fall into the
+            category of hybrid mobile apps and web-based or mobile web apps.
           </p>
         </div>
       </BackgroundImage>
@@ -179,9 +178,9 @@ export default () => {
               <li>real estate and asset management</li>
             </ul>
             <ul className={style.checked_list}>
-              <li>blockchain and crypto</li>
-              <li>payment and money transfer</li>
-              <li>real estate and asset management</li>
+              <li>banking</li>
+              <li>lending</li>
+              <li>insurance</li>
               <p
                 className={classNames(
                   style.body_1,
@@ -388,7 +387,7 @@ export default () => {
       >
         <div className={style.content}>
           <h2 className={classNames(style.sixth_section_h2, style.title_1)}>
-            How we build cross-platform <br /> mobile apps
+            Frameworks used to build <br /> cross-platform mobile apps
           </h2>
           <div className={style.gray_cards_box}>
             <div className={style.gray_card}>
@@ -753,8 +752,7 @@ export default () => {
           <div className={style.ninth_form_box}>
             <div className={style.ninth_form_column}>
               <h3 className={style.subtitle_1}>
-                Want to hire cross-platform app developers or get a
-                consultation?
+                Reach out to us. <br /> Our specialists will respond shortly.
               </h3>
               <p className={classNames(style.ninth_section_p, style.body_3)}>
                 Ask an Omertex expert how we can help.
