@@ -88,7 +88,7 @@ export default () => {
       jquery: file(relativePath: { eq: "wads/png_icon_jquery.png" }) {
         ...sharpImage
       }
-      form_bg: file(relativePath: { eq: "wads/form_bg.jpg" }) {
+      form_bg: file(relativePath: { eq: "common/form_bg.jpg" }) {
         ...sharpImage
       }
     }
