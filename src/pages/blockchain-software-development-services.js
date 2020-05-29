@@ -192,7 +192,7 @@ export default () => {
       >
         <div className={classNames(style.content)}>
           <h1 className={style.title_1}>
-            Blockchain Software <br /> Development Services
+            Blockchain software development services
           </h1>
         </div>
       </BackgroundImage>
@@ -211,11 +211,12 @@ export default () => {
             created quite a stir in the worldwide market, and with new
             businesses opening up to it, it’s paving ways for new applications
             and use cases every other day. All major industries including
-            Finance, Retail, Manufacturing, and Real Estate have been influenced
-            by the Blockchain technology in one way or another.
-            <br /> <br />
+            Finance, Retail, Manufacturing, Real Estate and many others have
+            been influenced by the Blockchain technology in one way or another.
+            <br />
             It was once easy to be mistaken for just another in-shore software
-            development company, but our creativity has made us remarkable.
+            development company, but our creativity and expertise have made us
+            remarkable.
           </p>
         </div>
       </section>
@@ -231,28 +232,28 @@ export default () => {
             About us
           </h2>
           <p className={style.body_1}>
-            As a custom software development company Omertex ltd provides
-            services for startups and enterprises. We have combined perennial
-            experience in the development of on-line services with deep
-            immersion in the new technology of blockchain. Having intricate
-            knowledge of the advantages and limitations of the technology, we
-            analyze and recommend the most effective solution for your project.
-            We collaborate with our clients on a regular basis to provide them
-            with confidence in creating the most advanced business decisions, by
-            developing cutting-edge Blockchain solutions. We’re pioneers in the
-            development and application of blockchain technologies, combining
-            extensive business expertise with top-notch technical experience in
-            applying blockchain solutions to your toughest problems. From
-            technical development for Initial Coin Offerings (ICOs), to
-            full-fledged decentralized applications (dApps)-we stay on the
-            cutting edge of each service we offer. Being a part of that change
-            is what fuels us each day. The vast domain experience of Omertex
-            outsourced developers and innovative technologies allow us to
-            generate secure and stable P2P solutions with maximum scalability
-            for the potential growth of any projects. Start blockchain
-            development with our blockchain development team to obtain the
-            high-quality code and the safest verification systems needed for
-            your crypto-focused websites.
+            As a custom software development company Omertex provides blockchain
+            software development services for startups and enterprises. We have
+            combined perennial experience in the development of on-line services
+            with deep immersion in the new technology of blockchain. Having
+            intricate knowledge of the advantages and limitations of the
+            technology, we analyze and recommend the most effective blockchain
+            solution for your project. We collaborate with our clients on a
+            regular basis to provide them with confidence in creating the most
+            advanced business decisions, by developing cutting-edge Blockchain
+            solutions. We’re pioneers in the development and application of
+            blockchain technologies, combining extensive business expertise with
+            top-notch technical experience in applying blockchain solutions to
+            your toughest problems. From technical development for Initial Coin
+            Offerings (ICOs), to full-fledged decentralized applications (dApps)
+            - we stay on the cutting edge of each service we offer. Being a part
+            of that change is what fuels us each day. The vast domain experience
+            of Omertex outsourced developers and innovative technologies allow
+            us to generate secure and stable P2P solutions with maximum
+            scalability for the potential growth of any projects. Start
+            blockchain development with our blockchain development team to
+            obtain the high-quality code and the safest verification systems
+            needed for your crypto-focused websites.
           </p>
         </div>
       </section>
@@ -283,6 +284,7 @@ export default () => {
                 knowledge with a passion to work on challenging projects.
               </div>
             </div>
+            <div className={style.three_step_separator} />
             <div className={style.three_step}>
               <div
                 className={classNames(style.title_2, style.three_step_title)}
@@ -313,12 +315,12 @@ export default () => {
       >
         <div className={classNames(style.content)}>
           <h2 className={classNames(style.title_1, style.fourth_section_h2)}>
-            What We Do?
+            What we do?
           </h2>
           <div className={style.p_line_box}>
             <div className={style.p_line} />
             <p className={style.body_1}>
-              Omertex ltd is an experienced and passionate team of Blockchain
+              Omertex is an experienced and passionate team of Blockchain
               specialists and enthusiasts who want to contribute to the shaping
               of a decentralized world. We don't compromise on quality, which is
               why we make sure to stay up to date with recent trends in the
@@ -371,7 +373,7 @@ export default () => {
       >
         <div className={classNames(style.content)}>
           <h2 className={classNames(style.title_1, style.fifth_section_h2)}>
-            Why Us
+            Why us
           </h2>
           <p className={style.body_1}>
             Our customers choose Omertex as a result of our deep domain
@@ -383,14 +385,16 @@ export default () => {
             globally, which enables us to proffer Fintech services at a
             reasonable price. By utilizing our blockchain software development
             services, you can bring about solutions that simplify the purchase
-            process or store virtual currency. <br /> <br />
+            process or store virtual currency.
+            <br /> <br />
             We have a customer-oriented approach and constantly engage in taking
             feedback throughout the process. The eagerness to serve our clients
             and procure solutions that fulfill their desires, at the stipulated
             time, molds our daily practice.
             <br /> <br />
-            The Omertex ltd team includes the finest brains in the world, and we
-            are thought to be among the best consulting companies in XXX.
+            The Omertex team includes the finest brains in the world, and we are
+            thought to be among the best consulting companies in FinTech
+            industry.
             <br /> <br />
             Blockchain software development services permit your business to
             provide increased efficiency and better information to customers, by
@@ -410,7 +414,7 @@ export default () => {
         )}
       >
         <div className={classNames(style.content)}>
-          <h2 className={style.title_1}>Our Approach</h2>
+          <h2 className={style.title_1}>Our approach</h2>
           <p className={classNames(style.body_1, style.sixth_section_p)}>
             Assisting you in each step with perfect business solutions for a
             limitless transcendence of your enterprise.
@@ -447,7 +451,8 @@ export default () => {
               </h3>
               <p className={style.body_1}>
                 Source of complementary domain expertise, on call and at the
-                ready. You are a stakeholder of the best deliverable solution.
+                ready. <br /> You are a stakeholder of the best deliverable
+                solution.
               </p>
             </div>
             <div className={style.image_column}>
@@ -463,8 +468,8 @@ export default () => {
               </h3>
               <p className={style.body_1}>
                 Your time is precious to us, no loss of hours with endless
-                meetings. The average time for our proofs-of-concept is six to
-                eight weeks.
+                meetings. <br /> The average time for our proofs-of-concept is
+                six to eight weeks.
               </p>
             </div>
             <div className={style.image_column}>
@@ -480,7 +485,7 @@ export default () => {
               </h3>
               <p className={style.body_1}>
                 Our main goal is to provide an innovative approach to blockchain
-                software development when working with startups and enterprises
+                software development when working with startups and enterprises.
               </p>
             </div>
             <div className={style.image_column}>
@@ -566,7 +571,7 @@ export default () => {
             expertise. Blockchain technology will add value to your products and
             services, while enhancing performance, functionality, and security.
             Hire developers from our blockchain development team to enjoy a
-            plethora of benefits from Omertex ltd.
+            plethora of benefits from Omertex.
           </p>
           <div className={style.image_columns_box}>
             <div className={style.image_column}>
@@ -634,7 +639,7 @@ export default () => {
                 Bitcoin wallet application development
               </h3>
               <p className={style.body_1}>
-                At Omertex Itd, we make sure that all the work performed by our
+                At Omertex, we make sure that all the work performed by our
                 skilled experts complies with industry anti-money laundering
                 regulations including SOX, PCI DSS, Dodd-Frank, Check-21 and the
                 Securities Act of 1933. Protect traditional and multi-signature
@@ -943,12 +948,12 @@ export default () => {
           <div className={classNames(style.justify_center)}>
             <button
               className={classNames(
-                buttons.btn_dark,
+                buttons.btn_white,
                 !hiddenColumns ? style.hiddenColumns : ""
               )}
               onClick={changeHiddenColumns}
             >
-              Read more...
+              View more
             </button>
           </div>
         </div>
@@ -962,7 +967,7 @@ export default () => {
       >
         <div className={classNames(style.content)}>
           <h2 className={style.title_1}>Blockchains we work with</h2>
-          <div className={style.justify_center}>
+          <div className={style.eighth_section_box}>
             <div className={style.blockchains_box}>
               <div className={style.color_card}>
                 <Img
@@ -970,7 +975,9 @@ export default () => {
                   className={style.color_card_icon}
                   alt="EOS"
                 />
-                <h3 className={classNames(style.color_card_h3, style.body_1)}>
+                <h3
+                  className={classNames(style.color_card_h3, style.subtitle_1)}
+                >
                   EOS
                 </h3>
               </div>
@@ -980,7 +987,9 @@ export default () => {
                   className={style.color_card_icon}
                   alt="Ethereum"
                 />
-                <h3 className={classNames(style.color_card_h3, style.body_1)}>
+                <h3
+                  className={classNames(style.color_card_h3, style.subtitle_1)}
+                >
                   Ethereum
                 </h3>
               </div>
@@ -990,7 +999,9 @@ export default () => {
                   className={style.color_card_icon}
                   alt="TRON"
                 />
-                <h3 className={classNames(style.color_card_h3, style.body_1)}>
+                <h3
+                  className={classNames(style.color_card_h3, style.subtitle_1)}
+                >
                   TRON
                 </h3>
               </div>
@@ -1000,7 +1011,9 @@ export default () => {
                   className={style.color_card_icon}
                   alt="Hyperledger"
                 />
-                <h3 className={classNames(style.color_card_h3, style.body_1)}>
+                <h3
+                  className={classNames(style.color_card_h3, style.subtitle_1)}
+                >
                   Hyperledger
                 </h3>
               </div>
@@ -1018,12 +1031,12 @@ export default () => {
         fluid={images.form_bg.childImageSharp.fluid}
       >
         <div className={style.content}>
-          <h2 className={style.title_1}>
+          <h2 className={classNames(style.title_1, style.ninth_section_h2)}>
             Mobile & Web apps development <br /> fintech solutions
           </h2>
           <div className={style.ninth_form_box}>
             <div className={style.ninth_form_column}>
-              <h3 className={classNames(style.ninth_section_h2, style.title_3)}>
+              <h3 className={classNames(style.ninth_section_h3, style.title_3)}>
                 Reach out to us. <br /> Our specialists will respond shortly.
               </h3>
               <p className={classNames(style.ninth_section_p, style.body_1)}>

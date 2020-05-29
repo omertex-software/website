@@ -92,7 +92,7 @@ body
   background-color: #000000
 
 .first_section
-  padding: 76px 0 106px 0
+  padding: 70px 0 50px 0
   background-color: #FAFAFA
   border-bottom: 1px solid #E5E5E5
 
@@ -115,7 +115,6 @@ body
 .three_step
   display: flex
   justify-content: space-between
-  margin-top: 20px
 
 .three_step_title
   display: flex
@@ -128,6 +127,20 @@ body
 .three_step_description
   max-width: 590px
   margin-left: 22px
+
+.three_step_separator
+  width: 100%
+  height: 1px
+  background-color: #E5E5E5
+  margin: 40px 0
+  &:before
+    content: ""
+    width: 7px
+    height: 7px
+    background-color: #E5E5E5
+    position: absolute
+    margin-top: -3px
+    border-radius: 6px
 
 .fourth_section
   padding: 70px 0 10px 0
@@ -180,7 +193,7 @@ body
   padding: 40px 0
 
 .seventh_section
-  padding: 70px 0 50px 0
+  padding: 70px 0 25px 0
   background-color: #FAFAFA
   border-bottom: 1px solid #E5E5E5
 
@@ -195,11 +208,15 @@ body
   padding: 50px 0
   border-bottom: 1px solid #E5E5E5
 
+.eighth_section_box
+  display: flex
+  justify-content: center
+
 .blockchains_box
   width: 652px
   display: flex
   flex-wrap: wrap
-  margin: 70px -10px 0 -10px
+  margin: 70px -10px -10px -10px
 
 .color_card
   width: 304px
@@ -214,7 +231,7 @@ body
 .color_card_icon
   width: 110px
   height: 110px
-  margin: 0 10px 0 20px
+  margin: 0 10px 0 6px
 
 .color_card_h3
   font-weight: 900
@@ -233,62 +250,139 @@ body
   max-width: 470px
   width: 100%
 
-.ninth_section_h2
+.ninth_section_h3
   font-weight: 600
   padding-bottom: 10px
 
 .ninth_section_p
   padding-top: 10px
 
-//@media screen and (max-width: 1080px)
-//  .title_1
-//    font-size: 54px
-//    line-height: 64px
+@media screen and (max-width: 1080px)
+  .title_1
+    font-size: 54px
+    line-height: 64px
 
-  //.image_columns_box
-  //  justify-content: center
-  //
-  //.image_column
-  //  margin: 0 auto 70px auto
-  //
-  //.three_step_title
-  //  max-width: 250px
-  //
-  //.technology_icons_box
-  //  flex-wrap: wrap
-  //  justify-content: center
+  .image_columns_box
+    justify-content: center
 
-//@media screen and (max-width: 960px)
-//  .text_cards_dox
-//    display: flex
-//    flex-flow: column
-//
-//  .text_card
-//    max-width: 100%
-//    text-align: left
+  .image_column
+    margin: 0 auto 40px auto
 
-//@media screen and (max-width: 760px)
-//  .title_1
-//    font-size: 36px
-//    line-height: 43px
-//    letter-spacing: 0.02em
-//
-//  .title_2
-//    font-size: 34px
-//    line-height: 118.56%
-//
-//  .title_3
-//    font-size: 24px
-//    line-height: 29px
-//
-//  .body_1
-//    font-size: 16px
-//    line-height: 24px
-//
-//  .content
-//    padding: 0 20px
+  .three_step_title
+    max-width: 250px
 
-//@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-//  @media screen and (max-width: 640px)
-//    .technology_icons_box
-//      width: 340px
+@media screen and (max-width: 760px)
+  .title_1
+    font-size: 36px
+    line-height: 43px
+    letter-spacing: 0.02em
+
+  .title_2
+    font-size: 34px
+    line-height: 118.56%
+
+  .title_3
+    font-size: 24px
+    line-height: 29px
+
+  .body_1
+    font-size: 16px
+    line-height: 24px
+
+  .content
+    padding: 0 20px
+
+  .page_header
+    padding: 73px 0
+
+  .second_section_h2
+    padding-bottom: 40px
+
+  .three_step
+    display: flex
+    flex-flow: column
+
+  .three_step_title
+    display: flex
+    align-items: center
+    text-align: center
+    font-size: 24px
+    line-height: 96%
+    max-width: 100%
+
+  .three_step_description
+    max-width: 100%
+    margin-left: 0
+    margin-top: 20px
+
+  .p_line_box
+    padding-bottom: 20px
+
+  .fifth_section_h2
+    padding-bottom: 40px
+
+  .sixth_section_p
+    padding: 40px 0 50px 0
+    text-align: left
+
+  .image_column
+    margin-bottom: 45px
+
+  .image_column_icon
+    width: 90px
+    height: 90px
+
+  .image_column_title
+    padding: 24px 0
+
+  .seventh_section
+    padding: 70px 0 50px 0
+
+  .seventh_section_p
+    padding: 40px 0 60px 0
+    text-align: left
+
+  .eighth_section
+    padding: 50px 0 70px 0
+
+  .eighth_section_box
+    justify-content: normal
+
+  .blockchains_box
+    width: 100%
+    display: flex
+    flex-flow: column
+    flex-wrap: wrap
+    margin: 40px -10px -10px -10px
+
+  .color_card
+    width: 100%
+    height: 98px
+
+  .color_card_icon
+    width: 72px
+    height: 72px
+    margin: 0 26px 0 18px
+
+  .ninth_section
+    padding: 60px 0 30px 0
+
+  .ninth_form_box
+    flex-flow: column
+    align-items: center
+    margin-top: 30px
+
+  .ninth_form_column
+    padding-bottom: 40px
+
+  .ninth_section_h2
+    font-size: 30px
+    line-height: 118.56%
+
+  .ninth_section_h3
+    font-size: 18px
+    line-height: 22px
+    padding-bottom: 10px
+
+  .ninth_section_p
+    padding-top: 6px
