@@ -87,19 +87,50 @@ body
   letter-spacing: 0.02em
 
 .page_header
-  padding: 59px 0
+  padding: 122px 0 137px 0
   color: #ffffff
   background-color: #000000
 
-.page_header_p
-  margin-top: 40px
-  line-height: 140%
-  text-align: center
-
 .first_section
-  padding: 30px 0 50px 0
+  padding: 109px 0 80px 0
   background-color: #FAFAFA
   border-bottom: 1px solid #E5E5E5
+
+.second_section
+  padding: 70px 0 50px 0
+  border-bottom: 1px solid #E5E5E5
+
+.second_section_p
+  padding-top: 50px
+  text-align: center
+
+.third_section
+  padding: 70px 0 50px 0
+  background-color: #FAFAFA
+  border-bottom: 1px solid #E5E5E5
+
+.third_section_p
+  padding-top: 50px
+  text-align: center
+
+.btn_cards_box
+  display: flex
+  justify-content: space-between
+
+.btn_card
+  max-width: 470px
+  padding-top: 40px
+
+.btn_card_p
+  padding: 40px 0
+
+.fourth_section
+  padding: 70px 0 50px 0
+  border-bottom: 1px solid #E5E5E5
+
+.fourth_section_p
+  padding-top: 50px
+  text-align: center
 
 .three_steps_box
   display: flex
@@ -121,36 +152,9 @@ body
   max-width: 575px
   margin-left: auto
 
-.second_section
-  padding: 70px 0 50px 0
-  border-bottom: 1px solid #E5E5E5
-
-.second_section_p
-  padding: 50px 0
-  text-align: center
-
-.second_section_lifecycle
-  width: 961px
-  height: 132px
-  background: url("./../assets/images/csds/coverage_ lifecycle_desktop.png") no-repeat center
-
-.third_section
-  padding: 70px 0 50px 0
-  background-color: #FAFAFA
-  border-bottom: 1px solid #E5E5E5
-
-.third_section_h2
-  padding-bottom: 10px
-
-.third_section_h3
-  padding: 40px 0 20px 0
-  text-align: center
-
-.third_section_p
-  text-align: center
-
-.fourth_section
+.fifth_section
   padding: 70px 0 10px 0
+  background-color: #FAFAFA
 
 .image_columns_box
   display: flex
@@ -159,7 +163,8 @@ body
   margin-top: 50px
 
 .image_column
-  max-width: 460px
+  max-width: 307px
+  width: 100%
   margin-bottom: 40px
 
 .image_column_icon
@@ -167,23 +172,29 @@ body
   height: 110px
 
 .image_column_title
-  padding: 40px 0
+  min-height: 72px
+  display: flex
+  align-items: center
+  padding: 58px 0
 
-.fifth_section
+.sixth_section
   padding: 70px 0 30px 0
   background-color: #3D3D3D
   color: #FFFFFF
 
-.fifth_form_box
+.sixth_section_h2
+  margin: 0 -5px
+
+.sixth_form_box
   display: flex
   justify-content: space-between
   margin-top: 80px
 
-.fifth_form_column
+.sixth_form_column
   max-width: 470px
   width: 100%
 
-.fifth_section_h3
+.sixth_section_h3
   font-weight: 600
 
 @media screen and (max-width: 1080px)
@@ -191,11 +202,8 @@ body
     font-size: 54px
     line-height: 64px
 
-  .second_section_lifecycle
-    width: 584px
-    height: 880px
-    margin: 0 auto
-    background: url("./../assets/images/csds/coverage_ lifecycle_tablet.png") no-repeat center
+  .btn_card
+    margin: 0 10px
 
   .image_columns_box
     justify-content: center
@@ -207,7 +215,7 @@ body
     margin: 0 auto
 
   .image_column_title
-    text-align: center
+    justify-content: center
 
   .three_step_title
     max-width: 270px
@@ -234,7 +242,24 @@ body
     padding: 0 20px
 
   .page_header
-    padding: 146px 0
+    padding: 74px 0
+
+  .first_section
+    padding: 60px 0
+
+  .second_section_p, .third_section_p, .fourth_section_p
+    padding-top: 40px
+    text-align: left
+
+  .btn_cards_box
+    flex-flow: column
+    justify-content: start
+
+  .btn_card
+    max-width: 100%
+
+  .btn_card_p
+    padding: 20px 0
 
   .three_step
     display: flex
@@ -253,46 +278,32 @@ body
     margin-left: 0
     margin-top: 20px
 
-  .second_section_p
-    padding: 40px 0
-    text-align: left
-
-  .second_section_lifecycle
-    width: 321px
-    height: 497px
-    background: url("./../assets/images/csds/coverage_ lifecycle_mobile.png") no-repeat center
-
-  .third_section_h2
-    padding-bottom: 0
-
-  .third_section_h3
-    text-align: left
-
-  .third_section_p
-    text-align: left
-
   .image_columns_box
     margin-top: 40px
+
+  .image_column
+     max-width: 460px
 
   .image_column_icon
     width: 90px
     height: 90px
 
   .image_column_title
+    min-height: auto
     padding: 20px 0
 
-  .fifth_section
-    padding: 70px 0 30px 0
+  .sixth_section
+    padding: 50px 0 30px 0
 
-  .fifth_form_box
+  .sixth_form_box
     flex-flow: column
     align-items: center
     margin-top: 30px
 
-  .fifth_form_column
+  .sixth_form_column
     padding-bottom: 40px
 
-  .fifth_section_h2
+  .sixth_section_h2
     font-size: 30px
     line-height: 118.56%
     text-align: left
