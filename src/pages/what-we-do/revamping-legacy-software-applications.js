@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
-import Layout from "../components/layout"
-import classNames from "../helpers/classNames"
+import Layout from "../../components/layout"
+import classNames from "../../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
-import style from "./application-modernization.module.sass"
-import { bitrix24ContactFormIntegrable } from "../helpers/bitrix24Scripts"
+import style from "./revamping-legacy-software-applications.module.sass"
+import { bitrix24ContactFormIntegrable } from "../../helpers/bitrix24Scripts"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -135,7 +135,7 @@ export default () => {
               <div
                 className={classNames(style.title_3, style.three_step_title)}
               >
-                Cloud migration/ migration to cloud
+                Cloud migration / Migration to cloud
               </div>
               <div
                 className={classNames(
@@ -217,10 +217,10 @@ export default () => {
         <div className={style.content}>
           <h2 className={style.title_1}>Complete lifecycle coverage</h2>
           <p className={classNames(style.body_1, style.third_section_p)}>
-            At Omertex we take your vision and build a state-of-the-art
+            At Omertex, we take your vision and build a state of the art
             application from the ground up. Our team of business analysts and
             software engineers will devise a complete product strategy and
-            deliver a product that meets your unique requirements.
+            deliver a product that meets your unique requirements
           </p>
           <div className={style.third_section_lifecycle} />
         </div>

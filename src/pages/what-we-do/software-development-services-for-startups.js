@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
-import Layout from "../components/layout"
-import classNames from "../helpers/classNames"
+import Layout from "../../components/layout"
+import classNames from "../../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import style from "./software-development-services-for-startups.module.sass"
-import { bitrix24ContactFormIntegrable } from "../helpers/bitrix24Scripts"
+import { bitrix24ContactFormIntegrable } from "../../helpers/bitrix24Scripts"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
