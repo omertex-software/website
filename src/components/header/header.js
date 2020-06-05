@@ -60,10 +60,7 @@ const Header = () => {
         >
           <Link to="/" className={style.company_logo} />
           <div className={classNames(style.header_menu, style.align_center)}>
-            <Link
-              className={style.header_menu_link}
-              to="/cross-platform-mobile-app-development"
-            >
+            <Link className={style.header_menu_link} to="/">
               Services
             </Link>
             <Link className={style.header_menu_link} to="/">

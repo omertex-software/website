@@ -96,6 +96,14 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
+            href="/fintech-software-development-services"
+          >
+            013 Fintech software development services
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
             href="/fintech-software-development-services/blockchain-software-development-services"
           >
             018 Blockchain Software Development Services
