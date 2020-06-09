@@ -1,0 +1,60 @@
+.title
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 60px
+  line-height: 72px
+  text-align: center
+
+.description
+  padding-top: 40px
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 140%
+  letter-spacing: 0.03em
+  text-align: center
+
+.section
+  width: 100%
+  min-height: 400px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #ffffff
+  background-color: #000000
+
+.big_section
+  @extend .section
+
+.content
+  width: 960px
+  padding: 0 60px
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .section
+    height: 340px
+
+@media screen and (max-width: 1080px)
+  .title
+    font-size: 54px
+    line-height: 64px
+
+@media screen and (max-width: 760px)
+  .title
+    font-size: 36px
+    line-height: 43px
+    letter-spacing: 0.02em
+
+  .description
+    font-size: 16px
+
+  .section
+    min-height: 340px
+
+  .big_section
+    min-height: 640px
+
+  .content
+    padding: 0 20px

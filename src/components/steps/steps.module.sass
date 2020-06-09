@@ -1,0 +1,85 @@
+.justify_center
+  display: flex
+  justify-content: center
+
+.steps_box
+  display: flex
+  flex-direction: column
+  margin-top: -40px
+
+.steps_box_hidden
+  @extend .steps_box
+  margin-top: 0
+
+.step
+  display: flex
+  margin-top: 40px
+
+.step_title
+  display: flex
+  align-items: center
+  max-width: 310px
+  width: 100%
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 30px
+  line-height: 108%
+  letter-spacing: 0
+
+.step_description
+  max-width: 600px
+  width: 100%
+  margin-left: auto
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 30px
+  letter-spacing: 0.03em
+
+.step_check
+  text-indent: -25px
+  padding-left: 25px
+  &::before
+    content: ""
+    width: 15px
+    height: 15px
+    margin-right: 10px
+    background: url('../../assets/images/common/svg_icon_check.svg') no-repeat center
+    display: inline-block
+
+.showMoreBox
+  display: flex
+  justify-content: center
+  margin-top: 40px
+
+.hiddenSteps
+  display: none
+
+@media screen and (max-width: 1080px)
+  .step_title
+    max-width: 270px
+
+@media screen and (max-width: 760px)
+  .step
+    display: flex
+    flex-flow: column
+
+  .step_title
+    display: flex
+    align-items: center
+    text-align: left
+    font-size: 24px
+    line-height: 96%
+    max-width: 100%
+
+  .step_description
+    max-width: 100%
+    margin-left: 0
+    margin-top: 20px
+    font-size: 16px
+    line-height: 24px
+
+  .showMoreBox
+    margin-top: 30px

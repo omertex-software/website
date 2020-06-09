@@ -1,0 +1,81 @@
+.title
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 30px
+  line-height: 36px
+
+.technologies_box
+  display: flex
+  flex-flow: column
+  margin-bottom: -40px
+
+.technology
+  display: flex
+  align-items: center
+  margin-bottom: 40px
+
+.technology_header
+  max-width: 490px
+  width: 100%
+
+.technology_description
+  margin-top: 16px
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 30px
+  letter-spacing: 0.03em
+
+.technology_icons_box
+  display: flex
+  margin-left: 61px
+
+.technology_icons
+  width: 97px
+  height: 64px
+
+@media screen and (max-width: 1080px)
+  .title
+    font-size: 54px
+    line-height: 64px
+
+  .technology_icons_box
+    flex-wrap: wrap
+    justify-content: center
+
+@media screen and (max-width: 760px)
+  .title
+    font-size: 24px
+    line-height: 29px
+
+  .technologies_box
+    margin-bottom: -50px
+
+  .technology
+    flex-flow: column
+    align-items: normal
+    margin-bottom: 50px
+
+  .technology_header
+    max-width: 100%
+
+  .technology_description
+    margin: 20px 0
+    font-size: 16px
+    line-height: 24px
+
+  .technology_icons_box
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: 0
+
+  .technology_icons
+    width: 150px
+    height: 100px
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  @media screen and (max-width: 640px)
+    .technology_icons_box
+      width: 340px

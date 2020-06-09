@@ -30,7 +30,7 @@ export default () => {
   return (
     <Layout>
       <Helmet
-        title="Web application development services"
+        title="Routing"
         charSet="utf-8"
         defer={false}
       />

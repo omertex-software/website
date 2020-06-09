@@ -1,0 +1,83 @@
+.title
+  padding: 80px 0
+  margin: 0 -5px
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 60px
+  line-height: 72px
+  text-align: center
+
+.section
+  width: 100%
+  display: flex
+  justify-content: center
+  padding-bottom: 30px
+  background-color: #3D3D3D
+  color: #FFFFFF
+
+.content
+  width: 960px
+  padding: 0 60px
+
+.form_box
+  display: flex
+  justify-content: space-between
+
+.form_column
+  max-width: 470px
+  width: 100%
+
+.form_info
+  h3
+    font-family: 'Lato', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 30px
+    line-height: 36px
+    &:last-of-type
+      padding-bottom: 10px
+  p
+    padding-top: 10px
+    font-family: 'Lato', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.03em
+
+@media screen and (max-width: 1080px)
+  .title
+    font-size: 54px
+    line-height: 64px
+
+@media screen and (max-width: 760px)
+  .title
+    padding: 60px 0 40px 0
+    font-size: 30px
+    line-height: 118.56%
+    letter-spacing: 0.02em
+
+  .section
+    padding-bottom: 0
+
+  .content
+    padding: 0 20px
+
+  .form_box
+    flex-flow: column
+    align-items: center
+
+  .form_column
+    padding-bottom: 40px
+
+  .form_info
+    h3
+      font-size: 24px
+      line-height: 118%
+      &:last-of-type
+        padding-bottom: 0
+    p
+      padding-top: 6px
+      font-size: 16px
+      line-height: 24px

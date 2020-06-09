@@ -7,7 +7,7 @@ import buttons from "../../assets/styles/buttons.module.sass"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import "../../assets/styles/mainCasesSlick.sass"
+import "./mainCasesSlick.sass"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {

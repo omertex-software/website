@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../../components/layout"
 import classNames from "../../helpers/classNames"
+import PageHeader from "../../components/pageHeader/pageHeader"
+import BottomForm from "../../components/bottomForm/bottomForm"
+import SectionForm from "../../components/sectionForm/sectionForm"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
+import page from "../../assets/styles/page.module.sass"
 import style from "./cross-platform-mobile-app-development.module.sass"
-import { bitrix24ContactFormIntegrable } from "../../helpers/bitrix24Scripts"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -19,12 +21,6 @@ export const sharpImage = graphql`
 `
 
 export default () => {
-  const [contactForm, setContactForm] = useState()
-
-  useEffect(() => {
-    bitrix24ContactFormIntegrable(setContactForm)
-  }, [])
-
   const images = useStaticQuery(graphql`
     query {
       header_bg: file(relativePath: { eq: "cpmad/cpmad-bg.jpg" }) {
@@ -109,38 +105,22 @@ export default () => {
         charSet="utf-8"
         defer={false}
       />
-      <BackgroundImage
-        Tag="section"
-        className={classNames(
-          style.section,
-          style.justify_center,
-          style.page_header
-        )}
-        fluid={images.header_bg.childImageSharp.fluid}
-      >
-        <div className={classNames(style.content)}>
-          <h1 className={classNames(style.page_header_h1, style.title_1)}>
-            Cross-platform mobile app development
-          </h1>
-          <p className={classNames(style.page_header_p, style.body_1)}>
-            What is a cross-platform app?
-          </p>
-          <p className={classNames(style.page_header_p, style.body_1)}>
-            A cross-platform mobile application is the one that can run on both
-            Android and iOS mobile phones. Cross-platform apps fall into the
-            category of hybrid mobile apps and web-based or mobile web apps.
-          </p>
-        </div>
-      </BackgroundImage>
+      <PageHeader
+        image={images.header_bg.childImageSharp.fluid}
+        title="Cross-platform mobile app development"
+        description="What is a cross-platform app? A cross-platform mobile application is the one that can run on both
+        Android and iOS mobile phones. Cross-platform apps fall into the category of hybrid mobile apps and web-based
+        or mobile web apps."
+      />
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.first_section
         )}
       >
-        <div className={style.content}>
-          <p className={style.body_1}>
+        <div className={page.content}>
+          <p className={page.body_1}>
             Looking for a mobile app development company to build a
             cross-platform mobile app for your business? At Omertex, we provide
             high-quality mobile app development services including native and
@@ -156,17 +136,17 @@ export default () => {
       </div>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.second_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.second_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.second_section_h2, page.title_1)}>
             Who do we build <br /> cross-platform mobile
             <br /> apps for?
           </h2>
-          <p className={style.body_1}>
+          <p className={page.body_1}>
             When providing cross-platform app development services, our
             development teams aim to create really valuable products for the
             industries that we work with, which include:
@@ -183,7 +163,7 @@ export default () => {
               <li>insurance</li>
               <p
                 className={classNames(
-                  style.body_1,
+                  page.body_1,
                   style.second_section_list_other
                 )}
               >
@@ -191,7 +171,7 @@ export default () => {
               </p>
             </ul>
           </div>
-          <p className={style.body_1}>
+          <p className={page.body_1}>
             That’s why, for each development process, we begin with a deep
             analysis. We’ll carefully study all the requirements to your sphere
             and your business in order to foresee pitfalls and to suggest the
@@ -203,16 +183,16 @@ export default () => {
       </div>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.third_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.third_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.third_section_h2, page.title_1)}>
             Benefits of choosing <br />a cross-platform mobile app
           </h2>
-          <p className={classNames(style.third_section_p, style.body_1)}>
+          <p className={classNames(style.third_section_p, page.body_1)}>
             Below are the benefits you receive when you choose for your app to
             be a cross-platform one:
           </p>
@@ -225,12 +205,12 @@ export default () => {
                   alt="icon"
                 />
                 <h3
-                  className={classNames(style.image_column_title, style.body_2)}
+                  className={classNames(style.image_column_title, page.body_2)}
                 >
                   Cost saving
                 </h3>
               </div>
-              <p className={classNames(style.image_column_p, style.body_1)}>
+              <p className={classNames(style.image_column_p, page.body_1)}>
                 Cross-platform app development allows you to reduce development
                 costs. This is the key benefit of such an app. Ordering a native
                 mobile app to be separately developed for Android and iPhone
@@ -249,12 +229,12 @@ export default () => {
                   alt="icon"
                 />
                 <h3
-                  className={classNames(style.image_column_title, style.body_2)}
+                  className={classNames(style.image_column_title, page.body_2)}
                 >
                   Faster delivery
                 </h3>
               </div>
-              <p className={classNames(style.image_column_p, style.body_1)}>
+              <p className={classNames(style.image_column_p, page.body_1)}>
                 As pointed out above, it is faster to build one mobile
                 application than it is to hire Android and iPhone app developers
                 separately. Ordering cross-platform app development allows you
@@ -272,12 +252,12 @@ export default () => {
                   alt="icon"
                 />
                 <h3
-                  className={classNames(style.image_column_title, style.body_2)}
+                  className={classNames(style.image_column_title, page.body_2)}
                 >
                   Truly Native UI
                 </h3>
               </div>
-              <p className={classNames(style.image_column_p, style.body_1)}>
+              <p className={classNames(style.image_column_p, page.body_1)}>
                 The tools and technologies used by our mobile app development
                 experts allow them to create cross-platform or hybrid mobile
                 apps that feel and look native on Android and iOS operating
@@ -292,12 +272,12 @@ export default () => {
                   alt="icon"
                 />
                 <h3
-                  className={classNames(style.image_column_title, style.body_2)}
+                  className={classNames(style.image_column_title, page.body_2)}
                 >
                   Live App Updates
                 </h3>
               </div>
-              <p className={classNames(style.image_column_p, style.body_1)}>
+              <p className={classNames(style.image_column_p, page.body_1)}>
                 The cross-platform app development framework Ionic lets you
                 update the UI and business logic of your app remotely, in
                 real-time. Push updates directly to end users to instantly fix
@@ -313,12 +293,12 @@ export default () => {
                   alt="icon"
                 />
                 <h3
-                  className={classNames(style.image_column_title, style.body_2)}
+                  className={classNames(style.image_column_title, page.body_2)}
                 >
                   App enhancement and support
                 </h3>
               </div>
-              <p className={classNames(style.image_column_p, style.body_1)}>
+              <p className={classNames(style.image_column_p, page.body_1)}>
                 When you have a cross-platform app built with a single code
                 base, it is much easier and cheaper to maintain your application
                 and to add new functionality with the help of reusable code and
@@ -332,17 +312,17 @@ export default () => {
       </div>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.fourth_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.fourth_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.fourth_section_h2, page.title_1)}>
             Cross-platform technologies <br />
             consulting services
           </h2>
-          <p className={classNames(style.fourth_section_p, style.body_1)}>
+          <p className={classNames(style.fourth_section_p, page.body_1)}>
             If you want to discuss some considerations regarding the mobile app
             or if you are interested in learning more about our approaches to
             cross-platform mobile app development (including hybrid and
@@ -354,39 +334,24 @@ export default () => {
           </p>
         </div>
       </div>
-      <div
-        className={classNames(
-          style.section,
-          style.justify_center,
-          style.fifth_section
-        )}
+      <SectionForm
+        color="#F07C26"
+        title="Looking for professional cross-platform app development services?"
       >
-        <div className={style.content}>
-          <h4 className={style.title_2}>
-            Looking for professional cross-platform app development services?
-          </h4>
-          <p className={classNames(style.fifth_section_p, style.body_1)}>
-            Leave us your contact details to schedule a free app development
-            consultation!
-          </p>
-          <div className={style.fifth_section_form}>
-            <input
-              className={style.fifth_section_input}
-              placeholder="Your email address"
-            />
-            <button className={style.fifth_section_btn}>submit</button>
-          </div>
-        </div>
-      </div>
+        <p>
+          Leave us your contact details to schedule a free app development
+          consultation!
+        </p>
+      </SectionForm>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.sixth_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.sixth_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.sixth_section_h2, page.title_1)}>
             Frameworks used to build <br /> cross-platform mobile apps
           </h2>
           <div className={style.gray_cards_box}>
@@ -396,7 +361,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="Xamarin"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 Xamarin
               </h3>
             </div>
@@ -406,7 +371,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="React native"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 React Native
               </h3>
             </div>
@@ -416,7 +381,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="Delphi FMX"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 Delphi FMX
               </h3>
             </div>
@@ -426,7 +391,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="PhoneGap"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 PhoneGap
               </h3>
             </div>
@@ -436,7 +401,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="React.js"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 React.js
               </h3>
             </div>
@@ -446,7 +411,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="Angular"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 Angular
               </h3>
             </div>
@@ -460,7 +425,7 @@ export default () => {
                 className={classNames(
                   style.gray_card_h3,
                   style.gray_card_h3_top,
-                  style.body_2
+                  page.body_2
                 )}
               >
                 Google <br /> Lighthouse
@@ -472,7 +437,7 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="Ionic"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 Ionic
               </h3>
             </div>
@@ -482,12 +447,12 @@ export default () => {
                 className={style.gray_card_icon}
                 alt="Cordova"
               />
-              <h3 className={classNames(style.gray_card_h3, style.body_2)}>
+              <h3 className={classNames(style.gray_card_h3, page.body_2)}>
                 Cordova
               </h3>
             </div>
           </div>
-          <h3 className={classNames(style.sixth_section_h3, style.subtitle_1)}>
+          <h3 className={classNames(style.sixth_section_h3, page.subtitle_1)}>
             In our company, we turn to the most advanced of them. We can offer
             you the following cross-platform app development services:
           </h3>
@@ -499,10 +464,10 @@ export default () => {
                 alt="React native"
               />
               <div className={style.color_card_description}>
-                <h3 className={classNames(style.color_card_h3, style.body_2)}>
+                <h3 className={classNames(style.color_card_h3, page.body_2)}>
                   React native
                 </h3>
-                <p className={classNames(style.color_card_p, style.body_1)}>
+                <p className={classNames(style.color_card_p, page.body_1)}>
                   App development
                 </p>
               </div>
@@ -514,10 +479,10 @@ export default () => {
                 alt="Xamarin"
               />
               <div className={style.color_card_description}>
-                <h3 className={classNames(style.color_card_h3, style.body_2)}>
+                <h3 className={classNames(style.color_card_h3, page.body_2)}>
                   Xamarin
                 </h3>
-                <p className={classNames(style.color_card_p, style.body_1)}>
+                <p className={classNames(style.color_card_p, page.body_1)}>
                   App development
                 </p>
               </div>
@@ -529,10 +494,10 @@ export default () => {
                 alt="Flutter"
               />
               <div className={style.color_card_description}>
-                <h3 className={classNames(style.color_card_h3, style.body_2)}>
+                <h3 className={classNames(style.color_card_h3, page.body_2)}>
                   Flutter
                 </h3>
-                <p className={classNames(style.color_card_p, style.body_1)}>
+                <p className={classNames(style.color_card_p, page.body_1)}>
                   App development
                 </p>
               </div>
@@ -542,16 +507,16 @@ export default () => {
       </div>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.seventh_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.seventh_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.seventh_section_h2, page.title_1)}>
             How we build cross-platform <br /> mobile apps
           </h2>
-          <p className={classNames(style.seventh_section_p, style.body_1)}>
+          <p className={classNames(style.seventh_section_p, page.body_1)}>
             At Omertex, we provide a full cycle of the services traditionally
             offered by a mobile app development company. We take mobile app
             development extremely seriously and want to achieve the highest
@@ -561,22 +526,22 @@ export default () => {
             existing mobile app if you are looking to enhance it or looking for
             a new vendor.
           </p>
-          <h4 className={classNames(style.seventh_section_h4, style.body_2)}>
+          <h4 className={classNames(style.seventh_section_h4, page.body_2)}>
             The cross-platform app development process includes the following
             steps:
           </h4>
-          <div className={style.flow_column}>
+          <div className={page.flow_column}>
             <div className={style.line_list}>
               <div className={style.line_list_box}>
                 <div className={style.line_list_circle} />
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   Software specification (the collection and analysis of the
                   requirements)
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   Before starting their work, developers need to have a clear
                   understanding of what kind of product you want to get. That’s
                   why we pay very special attention to this step of mobile
@@ -593,10 +558,10 @@ export default () => {
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   App architecture designing
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   Throughout this stage, our mobile app developers strictly
                   follow all the functional and business requirements previously
                   gathered. They define the way your app will perform its tasks,
@@ -613,10 +578,10 @@ export default () => {
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   UI/UX designing
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   When we figure out how your app will function, it is necessary
                   to decide how it will look. The main task for our professional
                   development team is to make it both attractive and intuitively
@@ -633,10 +598,10 @@ export default () => {
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   Development
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   This step is pretty much self-explanatory. Just leave it to
                   us.
                 </p>
@@ -648,10 +613,10 @@ export default () => {
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   Testing and Quality assurance
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   When the app is ready, it’s time to test it and to check that
                   it is functioning properly. You can be sure that all bugs (if
                   any) will be fixed at this stage.
@@ -664,10 +629,10 @@ export default () => {
                 <div className={style.line_list_line} />
               </div>
               <div>
-                <h3 className={classNames(style.line_list_h3, style.title_2)}>
+                <h3 className={classNames(style.line_list_h3, page.title_2)}>
                   Post-development support and app maintenance
                 </h3>
-                <p className={classNames(style.line_list_p, style.body_1)}>
+                <p className={classNames(style.line_list_p, page.body_1)}>
                   If you think that our role as your cross-platform mobile app
                   development company ends immediately after testing, think
                   again. We are always ready to help you with updating your app
@@ -681,13 +646,13 @@ export default () => {
       </div>
       <div
         className={classNames(
-          style.section,
-          style.justify_center,
+          page.section,
+          page.justify_center,
           style.eighth_section
         )}
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.eighth_section_h2, style.title_1)}>
+        <div className={page.content}>
+          <h2 className={classNames(style.eighth_section_h2, page.title_1)}>
             Why should you choose <br /> Omertex for cross-platform <br /> app
             development?
           </h2>
@@ -735,39 +700,22 @@ export default () => {
           </div>
         </div>
       </div>
-      <BackgroundImage
-        Tag="section"
-        className={classNames(
-          style.section,
-          style.justify_center,
-          style.ninth_section
-        )}
-        fluid={images.form_bg.childImageSharp.fluid}
+      <BottomForm
+        image={images.form_bg.childImageSharp.fluid}
+        title="Want to hire cross-platform app developers or get a consultation?"
       >
-        <div className={style.content}>
-          <h2 className={classNames(style.ninth_section_h2, style.title_1)}>
-            Want to hire cross-platform <br /> app developers or get <br />a
-            consultation?
-          </h2>
-          <div className={style.ninth_form_box}>
-            <div className={style.ninth_form_column}>
-              <h3 className={style.subtitle_1}>
-                Reach out to us. <br /> Our specialists will respond shortly.
-              </h3>
-              <p className={classNames(style.ninth_section_p, style.body_3)}>
-                Ask an Omertex expert how we can help.
-                <br /> <br />
-                Find out how Omertex can drive actionable insights and
-                streamline workflows, so you can deliver results.
-                <br /> <br />
-                Explore life at Omertex, learn about available careers, or get
-                in touch with an Omertex representative.
-              </p>
-            </div>
-            <div className={style.ninth_form_column}>{contactForm}</div>
-          </div>
-        </div>
-      </BackgroundImage>
+        <h3>Reach out to us.</h3>
+        <h3>Our specialists will respond shortly.</h3>
+        <p>Ask an Omertex expert how we can help.</p>
+        <p>
+          Find out how Omertex can drive actionable insights and streamline
+          workflows, so you can deliver results.
+        </p>
+        <p>
+          Explore life at Omertex, learn about available careers, or get in
+          touch with an Omertex representative.
+        </p>
+      </BottomForm>
     </Layout>
   )
 }

@@ -1,0 +1,86 @@
+.section
+  width: 100%
+  min-height: 346px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #171718
+  color: #FFFFFF
+
+.content
+  width: 960px
+  padding: 60px
+  h4
+    font-family: 'Lato', sans-serif
+    font-style: normal
+    font-weight: 900
+    font-size: 30px
+    line-height: 36px
+  p
+    padding-top: 20px
+    font-family: 'Lato', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.03em
+
+.section_form
+  display: flex
+  align-items: center
+  padding-top: 20px
+
+.section_input
+  width: 100%
+  height: 44px
+  max-width: 428px
+  padding: 0 20px
+  background-color: #FFFFFF
+  border: 1px solid #E5E5E5
+  border-radius: 4px
+  outline: none
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 24px
+
+.section_btn
+  padding: 8px 58px
+  margin-left: 20px
+  background-color: #334059
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 20px
+  line-height: 140%
+  text-transform: uppercase
+  color: #FFFFFF
+  border: 1px solid #808796
+  border-radius: 4px
+  outline: none
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    border: 1px solid #FFFFFF
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .section
+    height: 346px
+
+@media screen and (max-width: 760px)
+  .content
+    padding: 60px 20px
+    p
+      font-size: 16px
+      line-height: 24px
+
+  .section_form
+    flex-flow: column
+
+  .section_input
+    width: 80%
+
+  .section_btn
+    font-size: 16px
+    margin-top: 16px

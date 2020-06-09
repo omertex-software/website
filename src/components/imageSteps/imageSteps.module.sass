@@ -1,0 +1,66 @@
+.image_steps_box
+  display: flex
+  flex-direction: column
+  margin-top: -40px
+
+.image_step
+  display: flex
+  align-items: center
+  margin-top: 40px
+
+.image_step_icon
+  width: 307px
+  height: 235px
+  margin-right: 40px
+  flex-shrink: 0
+
+.image_step_info
+  max-width: 575px
+  margin-left: auto
+
+.image_step_title
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 30px
+  line-height: 36px
+
+.image_step_p
+  padding-top: 20px
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 30px
+  letter-spacing: 0.03em
+
+
+@media screen and (max-width: 960px)
+  .image_step_icon
+    width: 205px
+    height: 157px
+
+@media screen and (max-width: 760px)
+  .image_step
+    display: flex
+    flex-flow: column
+
+  .image_step_icon
+    width: 307px
+    height: 235px
+    margin-right: 0
+    flex-shrink: 0
+
+  .image_step_info
+    max-width: 100%
+    margin-top: 20px
+    margin-left: 0
+
+  .image_step_title
+    font-size: 24px
+    line-height: 29px
+
+  .image_step_p
+    padding-top: 20px
+    font-size: 16px
+    line-height: 24px
