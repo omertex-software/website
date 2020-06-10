@@ -226,14 +226,16 @@ export default () => {
       >
         <div className={page.content}>
           <p className={page.body_1}>
-            Omertex is proud to offer customers assistance with their technical
-            needs, including providing an IT consultant for your startup. We
-            want to be sure that your company excels in your field, so we take
-            the time to approach IT differently. This means meeting with you and
-            learning about your industry specific needs and challenges before
-            going ahead with any work. We are happy to offer a wide range of
-            services to ensure your success throughout all stages of the startup
-            process.
+            Do you need a functional and reliable mobile banking app with
+            customized features on board ? Omertex is here to help you achieve
+            this goal! We’re experts in offering mobile banking software
+            solutions aimed at extending and boosting banking services while
+            reducing bank operating costs.
+            <br /> <br />
+            Tailored fintech solutions we offer will give you an edge when it
+            comes to a mobile banking application. You will be able to provide
+            an excellent customer experience and safety to your clients since we
+            pay attention to mobile banking app design and security.
           </p>
         </div>
       </section>
