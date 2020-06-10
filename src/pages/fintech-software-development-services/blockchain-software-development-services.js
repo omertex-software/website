@@ -484,8 +484,7 @@ export default () => {
             What we do?
           </h2>
           <div className={style.p_line_box}>
-            <div className={style.p_line} />
-            <p className={page.body_1}>
+            <p className={classNames(page.body_1, page.orange_line)}>
               Omertex is an experienced and passionate team of Blockchain
               specialists and enthusiasts who want to contribute to the shaping
               of a decentralized world. We don't compromise on quality, which is
@@ -498,8 +497,7 @@ export default () => {
             </p>
           </div>
           <div className={style.p_line_box}>
-            <div className={style.p_line} />
-            <p className={page.body_1}>
+            <p className={classNames(page.body_1, page.orange_line)}>
               Our blockchain consulting services provide the awareness necessary
               to establish and explore even the unmapped areas of the Fintech
               world. Sharing insight is merely a fragment of our services. We
@@ -508,8 +506,7 @@ export default () => {
             </p>
           </div>
           <div className={style.p_line_box}>
-            <div className={style.p_line} />
-            <p className={page.body_1}>
+            <p className={classNames(page.body_1, page.orange_line)}>
               With sheer insight, Omertex delivers distinctively tailored
               solutions for businesses and traders to reinforce their success.
               We empower brands to connect with their clients effectively to
@@ -517,8 +514,7 @@ export default () => {
             </p>
           </div>
           <div className={style.p_line_box}>
-            <div className={style.p_line} />
-            <p className={page.body_1}>
+            <p className={classNames(page.body_1, page.orange_line)}>
               Profound domain knowledge in core Finance, Tax, and Banking allows
               us to provide cutting-edge blockchain software development
               services within the FinTech space. We provide outsourcing

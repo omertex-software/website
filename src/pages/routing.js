@@ -108,6 +108,14 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
+            href="/what-we-do/software-development-services-for-startups/it-technical-partner-for-your-startup/"
+          >
+            015 IT technical partner for your startup
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
             href="/what-we-do/mobile-app-development-services/mobile-banking-application-development-company/ "
           >
             016 Mobile banking application development company
