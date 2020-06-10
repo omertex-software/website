@@ -24,13 +24,20 @@ const TwoColumns = ({ data, hideAfter, hideInMobile }) => {
 
   const renderColumns = info => {
     return info.map(item => (
-      <div className={style.image_column} key={item.title}>
+      <div
+        className={style.image_column}
+        key={item.title || item.description.slice(0, 10)}
+      >
         <Img
           fluid={item.image}
           className={style.image_column_icon}
           alt="icon"
         />
-        <h3 className={style.image_column_title}>{item.title}</h3>
+        {item.title ? (
+          <h3 className={style.image_column_title}>{item.title}</h3>
+        ) : (
+          <div className={style.image_column_indent} />
+        )}
         <p className={style.image_column_p}>{item.description}</p>
       </div>
     ))

@@ -29,11 +29,7 @@ const style = {
 export default () => {
   return (
     <Layout>
-      <Helmet
-        title="Routing"
-        charSet="utf-8"
-        defer={false}
-      />
+      <Helmet title="Routing" charSet="utf-8" defer={false} />
       <section style={style.section}>
         <div style={style.content}>
           <a
@@ -99,6 +95,14 @@ export default () => {
             href="/fintech-software-development-services"
           >
             013 Fintech software development services
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/what-we-do/software-development-services-for-startups/it-technical-consultant-for-your-startup/"
+          >
+            014 IT technical consultant for your startup
           </a>
           <a
             style={style.title}

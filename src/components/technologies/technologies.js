@@ -3,15 +3,15 @@ import style from "./technologies.module.sass"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const sharpImage = graphql`
-    fragment sharpImage on File {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+export const sharpImage = graphql`
+  fragment sharpImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1920) {
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
-  `
+  }
+`
 
 const Technologies = () => {
   const images = useStaticQuery(graphql`
@@ -19,7 +19,9 @@ const Technologies = () => {
       nodejs: file(relativePath: { eq: "technologies/png_icon_nodejs.png" }) {
         ...sharpImage
       }
-      net_core: file(relativePath: { eq: "technologies/png_icon_net_core.png" }) {
+      net_core: file(
+        relativePath: { eq: "technologies/png_icon_net_core.png" }
+      ) {
         ...sharpImage
       }
       django_python: file(
@@ -39,19 +41,25 @@ const Technologies = () => {
       mysql: file(relativePath: { eq: "technologies/png_icon_mysql.png" }) {
         ...sharpImage
       }
-      sql_server: file(relativePath: { eq: "technologies/png_icon_sql_server.png" }) {
+      sql_server: file(
+        relativePath: { eq: "technologies/png_icon_sql_server.png" }
+      ) {
         ...sharpImage
       }
       mongodb: file(relativePath: { eq: "technologies/png_icon_mongodb.png" }) {
         ...sharpImage
       }
-      postgresql: file(relativePath: { eq: "technologies/png_icon_postgresql.png" }) {
+      postgresql: file(
+        relativePath: { eq: "technologies/png_icon_postgresql.png" }
+      ) {
         ...sharpImage
       }
       angular: file(relativePath: { eq: "technologies/png_icon_angular.png" }) {
         ...sharpImage
       }
-      bootstrap: file(relativePath: { eq: "technologies/png_icon_bootstrap.png" }) {
+      bootstrap: file(
+        relativePath: { eq: "technologies/png_icon_bootstrap.png" }
+      ) {
         ...sharpImage
       }
       react: file(relativePath: { eq: "technologies/png_icon_react.png" }) {
