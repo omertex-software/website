@@ -22,6 +22,28 @@ const TwoColumns = ({ data, hideAfter, hideInMobile }) => {
     setHiddenColumnsMobile(!hiddenColumnsMobile)
   }
 
+  const renderDescription = description => {
+    if (typeof description === "string") {
+      return <p className={style.image_column_p}>{description}</p>
+    }
+    if (Array.isArray(description)) {
+      return (
+        <>
+          {description.map(item => (
+            <>
+              {item.title && (
+                <p className={style.image_column_title_min}>{item.title}</p>
+              )}
+              {item.description && (
+                <p className={style.image_column_p}>{item.description}</p>
+              )}
+            </>
+          ))}
+        </>
+      )
+    }
+  }
+
   const renderColumns = info => {
     return info.map(item => (
       <div
@@ -38,7 +60,7 @@ const TwoColumns = ({ data, hideAfter, hideInMobile }) => {
         ) : (
           <div className={style.image_column_indent} />
         )}
-        <p className={style.image_column_p}>{item.description}</p>
+        {renderDescription(item.description)}
       </div>
     ))
   }

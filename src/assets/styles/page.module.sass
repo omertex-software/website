@@ -98,6 +98,13 @@ body
     background-color: #F07C26
     margin: 0 18px -26px 0
 
+.orange_line_min
+  @extend .orange_line
+  &:before
+    width: 8px
+    height: 22px
+    margin: 0 18px 0 0
+
 @media screen and (max-width: 1080px)
   .title_1
     font-size: 54px
@@ -129,3 +136,7 @@ body
     padding-left: 17px
     &:before
       margin: 0 10px -26px 0
+
+  .orange_line_min
+    &:before
+      margin: 0 10px 0 0
