@@ -148,6 +148,14 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
+            href="/fintech-software-development-services/lending-software-development"
+          >
+            20 Lending software development
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
             href="/what-we-do/cross-platform-mobile-app-development"
           >
             025 Cross-platform mobile app development
