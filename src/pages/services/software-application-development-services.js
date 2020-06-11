@@ -273,8 +273,8 @@ export default () => {
           <h2 className={classNames(page.title_1, style.third_section_h2)}>
             We offer technical solutions for FInTech companies including
           </h2>
-          <div className={style.two_columns}>
-            <div className={style.two_columns_column}>
+          <div className={page.two_columns}>
+            <div className={page.two_columns_column}>
               <p
                 className={classNames(
                   page.title_3,
@@ -312,7 +312,7 @@ export default () => {
                 Billing
               </p>
             </div>
-            <div className={style.two_columns_column}>
+            <div className={page.two_columns_column}>
               <p
                 className={classNames(
                   page.title_3,

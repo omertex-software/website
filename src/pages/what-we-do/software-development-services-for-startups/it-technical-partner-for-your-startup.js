@@ -264,12 +264,13 @@ export default () => {
           <h2 className={classNames(page.title_1, style.fifth_section_h2)}>
             Why choose Omertex?
           </h2>
-          <div className={style.two_columns}>
+          <div className={page.two_columns}>
             <p
               className={classNames(
                 page.body_1,
                 page.orange_line,
-                style.two_columns_column
+                page.two_columns_column,
+                style.fifth_section_column
               )}
             >
               Omertex is a team of professional experts specializing in mobile
@@ -283,7 +284,7 @@ export default () => {
               className={classNames(
                 page.body_1,
                 page.orange_line,
-                style.two_columns_column
+                page.two_columns_column
               )}
             >
               The firm offers custom software developments specially tailored to

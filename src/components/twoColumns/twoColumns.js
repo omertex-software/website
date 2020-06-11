@@ -30,14 +30,14 @@ const TwoColumns = ({ data, hideAfter, hideInMobile }) => {
       return (
         <>
           {description.map(item => (
-            <>
+            <div key={item.title || item.description.slice(0, 10)}>
               {item.title && (
                 <p className={style.image_column_title_min}>{item.title}</p>
               )}
               {item.description && (
                 <p className={style.image_column_p}>{item.description}</p>
               )}
-            </>
+            </div>
           ))}
         </>
       )

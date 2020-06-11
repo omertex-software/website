@@ -5,12 +5,11 @@
 
 .image_step
   display: flex
-  align-items: center
+  align-items: start
   margin-top: 40px
 
 .image_step_icon
   width: 307px
-  height: 235px
   margin-right: 40px
   flex-shrink: 0
 
@@ -38,16 +37,15 @@
 @media screen and (max-width: 960px)
   .image_step_icon
     width: 205px
-    height: 157px
 
 @media screen and (max-width: 760px)
   .image_step
     display: flex
     flex-flow: column
+    align-items: center
 
   .image_step_icon
     width: 307px
-    height: 235px
     margin-right: 0
     flex-shrink: 0
 
