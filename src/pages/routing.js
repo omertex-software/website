@@ -100,7 +100,7 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
-            href="/what-we-do/software-development-services-for-startups/it-technical-consultant-for-your-startup/"
+            href="/what-we-do/software-development-services-for-startups/it-technical-consultant-for-your-startup"
           >
             014 IT technical consultant for your startup
           </a>
@@ -108,7 +108,7 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
-            href="/what-we-do/software-development-services-for-startups/it-technical-partner-for-your-startup/"
+            href="/what-we-do/software-development-services-for-startups/it-technical-partner-for-your-startup"
           >
             015 IT technical partner for your startup
           </a>
@@ -116,7 +116,7 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
-            href="/what-we-do/mobile-app-development-services/mobile-banking-application-development-company/ "
+            href="/what-we-do/mobile-app-development-services/mobile-banking-application-development-company"
           >
             016 Mobile banking application development company
           </a>
@@ -124,7 +124,7 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
-            href="/services/software-application-development-services/"
+            href="/services/software-application-development-services"
           >
             017 Software Application Development Services
           </a>
@@ -140,7 +140,7 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
-            href="/fintech-software-development-services/insurance-agency-software/"
+            href="/fintech-software-development-services/insurance-agency-software"
           >
             019 Insurance Agency Software
           </a>
@@ -151,6 +151,14 @@ export default () => {
             href="/fintech-software-development-services/lending-software-development"
           >
             20 Lending software development
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/fintech-software-development-services/banking-software"
+          >
+            21 Banking Software Solutions
           </a>
           <a
             style={style.title}

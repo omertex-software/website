@@ -114,6 +114,17 @@ body
   max-width: 47%
   width: 100%
 
+.check
+  text-indent: -25px
+  padding-left: 25px
+  &::before
+    content: ""
+    width: 15px
+    height: 15px
+    margin-right: 10px
+    background: url('../../assets/images/common/svg_icon_check.svg') no-repeat center
+    display: inline-block
+
 @media screen and (max-width: 1080px)
   .title_1
     font-size: 54px
@@ -138,7 +149,7 @@ body
     line-height: 24px
 
   .content
-    padding: 0 20px
+    padding: 0 15px
 
   .orange_line
     text-indent: -17px
