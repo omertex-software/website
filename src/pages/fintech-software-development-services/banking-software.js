@@ -312,9 +312,7 @@ export default () => {
         )}
       >
         <div className={page.content}>
-          <h2 className={page.title_1}>
-            Benefits of omertex software solutions for banks
-          </h2>
+          <h2 className={page.title_1}>What types of cooperation we offer</h2>
           <h3
             className={classNames(
               page.title_3,

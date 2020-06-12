@@ -150,7 +150,7 @@ export default () => {
             rel="noopener noreferrer"
             href="/fintech-software-development-services/lending-software-development"
           >
-            20 Lending software development
+            020 Lending software development
           </a>
           <a
             style={style.title}
@@ -158,7 +158,15 @@ export default () => {
             rel="noopener noreferrer"
             href="/fintech-software-development-services/banking-software"
           >
-            21 Banking Software Solutions
+            021 Banking Software Solutions
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/fintech-software-development-services/payment-gateway-integration"
+          >
+            022 Payment Gateway Integration Services
           </a>
           <a
             style={style.title}
