@@ -464,7 +464,7 @@ export default () => {
           <h2 className={classNames(page.title_1, style.fifth_section_h2)}>
             Learn more about our expertise in Android app development
           </h2>
-          <TwoColumnsSlider data={slideData} />
+          {/*<TwoColumnsSlider data={slideData} />*/}
         </div>
       </section>
       <section
