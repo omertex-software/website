@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import Layout from "../../components/layout"
 import classNames from "../../helpers/classNames"
 import PageHeader from "../../components/pageHeader/pageHeader"
@@ -10,10 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import page from "../../assets/styles/page.module.sass"
 import style from "./custom-software-development-services.module.sass"
-
-const BottomForm = React.lazy(() =>
-  import("../../components/bottomForm/bottomForm")
-)
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -235,11 +231,9 @@ export default () => {
           <TwoColumns data={chooseData} />
         </div>
       </section>
-      <Suspense fallback={<div>Загрузка...</div>}>
-        <BottomForm title="Ready to get your idea rolling?​">
-          <h3>Contact us with your project to get a free quote.</h3>
-        </BottomForm>
-      </Suspense>
+      {/*<BottomForm title="Ready to get your idea rolling?​">*/}
+      {/*  <h3>Contact us with your project to get a free quote.</h3>*/}
+      {/*</BottomForm>*/}
     </Layout>
   )
 }
