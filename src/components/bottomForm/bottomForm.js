@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react"
 import style from "./bottomForm.module.sass"
 import BackgroundImage from "gatsby-background-image"
 import classNames from "../../helpers/classNames"
-import { bitrix24ContactFormIntegrable } from "../../helpers/bitrix24Scripts"
+import { bitrix24ContactFormBottom } from "../../helpers/bitrix24Scripts"
 import { graphql, useStaticQuery } from "gatsby"
 
 const BottomForm = ({ image, title, children }) => {
   const [contactForm, setContactForm] = useState()
 
   useEffect(() => {
-    bitrix24ContactFormIntegrable(setContactForm)
+    bitrix24ContactFormBottom(setContactForm)
   }, [])
 
   const defaultImage = useStaticQuery(graphql`

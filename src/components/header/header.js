@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect(() => {
     menuOpened && (document.body.style.overflow = "hidden")
-    !menuOpened && (document.body.style.overflow = "unset")
+    !menuOpened && (document.body.style.overflow = "auto")
   }, [menuOpened])
 
   const reopenMobileMenu = () => {
