@@ -10,6 +10,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import page from "../../assets/styles/page.module.sass"
 import style from "./custom-software-development-services.module.sass"
+import loadable from "@loadable/component"
+
+const BottomForm = loadable(() =>
+  import("../../components/bottomForm/bottomForm")
+)
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -231,9 +236,9 @@ export default () => {
           <TwoColumns data={chooseData} />
         </div>
       </section>
-      {/*<BottomForm title="Ready to get your idea rolling?​">*/}
-      {/*  <h3>Contact us with your project to get a free quote.</h3>*/}
-      {/*</BottomForm>*/}
+      <BottomForm title="Ready to get your idea rolling?​">
+        <h3>Contact us with your project to get a free quote.</h3>
+      </BottomForm>
     </Layout>
   )
 }
