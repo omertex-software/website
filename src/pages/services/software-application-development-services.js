@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import page from "../../assets/styles/page.module.sass"
 import style from "./software-application-development-services.module.sass"
+import TwoColumnsList from "../../components/twoColumnsList/twoColumnsList"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -71,6 +72,17 @@ export default () => {
       }
     }
   `)
+
+  const listData = [
+    "Banking",
+    "Investment",
+    "Insurance",
+    "Crowdfunding",
+    "Payment and  money transfer",
+    "P2P lending",
+    "Billing",
+    "and other areas. ",
+  ]
 
   const columnsData = [
     {
@@ -273,84 +285,7 @@ export default () => {
           <h2 className={classNames(page.title_1, style.third_section_h2)}>
             We offer technical solutions for FInTech companies including
           </h2>
-          <div className={page.two_columns}>
-            <div className={page.two_columns_column}>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Banking
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Insurance
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Payment and money transfer
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Billing
-              </p>
-            </div>
-            <div className={page.two_columns_column}>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Investment
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                Crowdfunding
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                P2P lending
-              </p>
-              <p
-                className={classNames(
-                  page.title_3,
-                  page.orange_line_min,
-                  style.two_columns_h3
-                )}
-              >
-                and other areas.
-              </p>
-            </div>
-          </div>
+          <TwoColumnsList data={listData} minBottom={true} />
           <p className={classNames(page.body_1, style.third_section_p)}>
             We also assist our customers leverage cloud-based solutions,
             Blockchain and distributed ledger technology, microservice

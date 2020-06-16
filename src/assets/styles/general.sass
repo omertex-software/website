@@ -1,11 +1,46 @@
 *
   padding: 0
   margin: 0
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
 body
   min-width: 360px
   color: #000000
   font-family: 'Lato', sans-serif
+
+.gray_slick_dots
+  list-style-type: none
+  display: flex !important
+  justify-content: center
+  li
+    button
+      width: 10px
+      height: 10px
+      margin: 9px
+      flex-shrink: 0
+      border-radius: 5px
+      background-color: #ECECEC
+      color: rgba(0,0,0,0)
+      border: none
+      outline: none
+    &.slick-active
+      button
+        background-color: #CFCFCF
+
+.orange_slick_dots
+  @extend .gray_slick_dots
+  margin-top: 40px
+  li
+    button
+      background-color: #C4C4C4
+    &.slick-active
+      button
+        background-color: #F07C26
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
   body

@@ -51,6 +51,13 @@ module.exports = {
         defaultQuality: 70,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://omertex-website.herokuapp.com/",
+        policy: [{ userAgent: "*", disallow: ["/"] }],
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,

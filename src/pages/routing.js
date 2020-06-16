@@ -172,6 +172,22 @@ export default () => {
             style={style.title}
             target="_blank"
             rel="noopener noreferrer"
+            href="/what-we-do/iphone-app-development"
+          >
+            023 iOS app development
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/what-we-do/android-app-development"
+          >
+            024 Android app development
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
             href="/what-we-do/cross-platform-mobile-app-development"
           >
             025 Cross-platform mobile app development

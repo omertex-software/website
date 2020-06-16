@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 import classNames from "../../helpers/classNames"
 import PageHeader from "../../components/pageHeader/pageHeader"
+import TwoColumnsList from "../../components/twoColumnsList/twoColumnsList"
 import Steps from "../../components/steps/steps"
 import BottomForm from "../../components/bottomForm/bottomForm"
 import { useStaticQuery, graphql } from "gatsby"
@@ -27,6 +28,31 @@ export default () => {
       }
     }
   `)
+
+  const listData = [
+    {
+      title: "Cards",
+      description: "Сredit, debit, and prepaid cards",
+    },
+    {
+      title: "Online payments",
+      description: "PayPal, Amazon",
+    },
+    {
+      title: "Mobile payment technologies",
+      description: "like Apple Pay, Google Pay, Samsung Pay, etc.",
+    },
+    {
+      title: "Offline payments",
+      description: "cash, check, money order, invoice, bank transfer",
+    },
+    {
+      title: "Direct debit payments",
+    },
+    {
+      title: "Cryptocurrencies",
+    },
+  ]
 
   const stepsData = [
     {
@@ -125,7 +151,7 @@ export default () => {
           <h2 className={classNames(page.title_1, style.third_section_h2)}>
             Payment methods we integrate
           </h2>
-          <p className={page.body_1}>
+          <p className={classNames(page.body_1, style.third_section_p)}>
             There is a large variety of payment methods in the modern world.
             Each method has its own advantages and disadvantages. Your choice
             depends on the needs of your business and its geographical limits.
@@ -133,65 +159,8 @@ export default () => {
             likely only need a single currency, while international business
             will need to work with multiple currencies.
           </p>
-          <div className={style.third_section_columns}>
-            <div className={page.two_columns}>
-              <div className={page.two_columns_column}>
-                <h3 className={classNames(page.title_3, page.orange_line_min)}>
-                  Cards
-                </h3>
-                <p className={classNames(page.body_1, style.columns_p)}>
-                  Сredit, debit, and prepaid cards
-                </p>
-              </div>
-              <div className={page.two_columns_column}>
-                <h3 className={classNames(page.title_3, page.orange_line_min)}>
-                  Online payments
-                </h3>
-                <p className={classNames(page.body_1, style.columns_p)}>
-                  PayPal, Amazon
-                </p>
-              </div>
-            </div>
-            <div className={page.two_columns}>
-              <div className={page.two_columns_column}>
-                <div className={style.third_section_column_center}>
-                  <h3
-                    className={classNames(page.title_3, page.orange_line_min)}
-                  >
-                    Mobile payment technologies
-                  </h3>
-                  <p className={classNames(page.body_1, style.columns_p)}>
-                    like Apple Pay, Google Pay, Samsung Pay, etc.
-                  </p>
-                </div>
-              </div>
-              <div className={page.two_columns_column}>
-                <div className={style.third_section_column_center}>
-                  <h3
-                    className={classNames(page.title_3, page.orange_line_min)}
-                  >
-                    Offline payments
-                  </h3>
-                  <p className={classNames(page.body_1, style.columns_p)}>
-                    cash, check, money order, invoice, bank transfer
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={page.two_columns}>
-              <div className={page.two_columns_column}>
-                <h3 className={classNames(page.title_3, page.orange_line_min)}>
-                  Direct debit payments
-                </h3>
-              </div>
-              <div className={page.two_columns_column}>
-                <h3 className={classNames(page.title_3, page.orange_line_min)}>
-                  Cryptocurrencies
-                </h3>
-              </div>
-            </div>
-          </div>
-          <p className={page.body_1}>
+          <TwoColumnsList data={listData} />
+          <p className={classNames(page.body_1, style.third_section_p)}>
             Cryptocurrency, or digital currency, is the newest payment method
             and is becoming more and more popular each day. The most well known
             form of cryptocurrency is Bitcoin. Among others are Ethereum,

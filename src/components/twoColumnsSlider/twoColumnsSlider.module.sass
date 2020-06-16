@@ -1,0 +1,72 @@
+.cases_box
+  width: 100%
+  margin: 0 auto
+  div
+    outline: none
+
+.slide
+  width: 470px
+  margin: 0 auto
+
+.slide_img
+  width: 468px
+  height: 340px
+  background-color: #FFFFFF
+  border-radius: 8px
+  border: 1px solid #E0E0E0
+
+.slide_title
+  padding: 40px 0
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: 900
+  font-size: 30px
+  line-height: 36px
+
+.slide_description
+  font-family: 'Lato', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 30px
+  letter-spacing: 0.03em
+
+.slide_next_btn
+  width: 18px
+  height: 18px
+  right: -50px
+  position: absolute
+  top: 50%
+  display: block
+  transform: translate(0, -50%)
+  cursor: pointer
+  background-position: center
+  background-repeat: no-repeat
+
+.slide_prev_btn
+  @extend .slide_next_btn
+  left: -50px
+
+@media screen and (max-width: 1080px)
+  .cases_box
+    width: 690px
+
+  .slide
+    width: 330px
+
+  .slide_img
+    width: 328px
+    height: 238px
+
+@media screen and (max-width: 810px)
+  .cases_box
+    width: 330px
+
+  .slide_title
+    padding: 20px 0
+    font-size: 24px
+    line-height: 29px
+
+  .slide_description
+    font-size: 16px
+    line-height: 24px

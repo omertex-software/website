@@ -5,9 +5,6 @@ import Img from "gatsby-image"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import buttons from "../../assets/styles/buttons.module.sass"
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import "./mainCasesSlick.sass"
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
@@ -42,18 +39,18 @@ const MainCases = () => {
 
   const settings = {
     slidesToShow: 3,
+    slidesToScroll: 0,
+    infinite: false,
     arrows: false,
+    dotsClass: "gray_slick_dots",
     responsive: [
       {
-        breakpoint: 760,
+        breakpoint: 660,
         settings: {
-          infinite: false,
+          slidesToScroll: 1,
           dots: true,
-          arrows: false,
-          settings: "slick",
           slidesToShow: 1,
           variableWidth: true,
-          centerMode: true,
         },
       },
     ],
@@ -72,107 +69,122 @@ const MainCases = () => {
           className={classNames(style.section, style.cases_box)}
           {...settings}
         >
-          <div className={style.case} onClick={e => showCase(e)}>
-            <div className={style.case_view}>
-              <Img
-                fluid={images.ways.childImageSharp.fluid}
-                className={style.case_view_img}
-                alt="Ways con"
-              />
-              <h6 className={style.case_h6}>
-                You owe an ongoing <br /> business
-              </h6>
-            </div>
-            <div
-              className={classNames(style.case_description, style.flow_column)}
-            >
-              <h6 className={style.case_h6}>You owe an ongoing business</h6>
-              <p className={style.case_p}>
-                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
-                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
-                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
-                vehicula purus adipiscing massa.
-              </p>
+          <div>
+            <div className={style.case} onClick={e => showCase(e)}>
+              <div className={style.case_view}>
+                <Img
+                  fluid={images.ways.childImageSharp.fluid}
+                  className={style.case_view_img}
+                  alt="Ways con"
+                />
+                <h6 className={style.case_h6}>
+                  You owe an ongoing <br /> business
+                </h6>
+              </div>
               <div
                 className={classNames(
-                  style.case_description_btn,
-                  style.justify_center
+                  style.case_description,
+                  style.flow_column
                 )}
               >
-                <Link className={buttons.btn_dark} to="/">
-                  Read the insight
-                </Link>
+                <h6 className={style.case_h6}>You owe an ongoing business</h6>
+                <p className={style.case_p}>
+                  &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nunc purus, purus vestibulum amet arcu velit. Egestas
+                  egestas suscipit vitae elit neque. Eget vehicula purus
+                  adipiscing massa hendrerit. Eget vehicula purus adipiscing
+                  massa hendrerit. Eget vehicula purus adipiscing massa.
+                </p>
+                <div
+                  className={classNames(
+                    style.case_description_btn,
+                    style.justify_center
+                  )}
+                >
+                  <Link className={buttons.btn_dark} to="/">
+                    Read the insight
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className={style.case} onClick={e => showCase(e)}>
-            <div className={style.case_view}>
-              <Img
-                fluid={images.steps.childImageSharp.fluid}
-                className={style.case_view_img}
-                alt="Steps icon"
-              />
-              <h6 className={style.case_h6}>
-                You’re looking to launch a new business
-              </h6>
-            </div>
-            <div
-              className={classNames(style.case_description, style.flow_column)}
-            >
-              <h6 className={style.case_h6}>
-                You’re looking to launch <br /> a new business
-              </h6>
-              <p className={style.case_p}>
-                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
-                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
-                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
-                vehicula purus adipiscing massa.
-              </p>
+          <div>
+            <div className={style.case} onClick={e => showCase(e)}>
+              <div className={style.case_view}>
+                <Img
+                  fluid={images.steps.childImageSharp.fluid}
+                  className={style.case_view_img}
+                  alt="Steps icon"
+                />
+                <h6 className={style.case_h6}>
+                  You’re looking to launch a new business
+                </h6>
+              </div>
               <div
                 className={classNames(
-                  style.case_description_btn,
-                  style.justify_center
+                  style.case_description,
+                  style.flow_column
                 )}
               >
-                <Link className={buttons.btn_dark} to="/">
-                  Read the insight
-                </Link>
+                <h6 className={style.case_h6}>
+                  You’re looking to launch <br /> a new business
+                </h6>
+                <p className={style.case_p}>
+                  &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nunc purus, purus vestibulum amet arcu velit. Egestas
+                  egestas suscipit vitae elit neque. Eget vehicula purus
+                  adipiscing massa hendrerit. Eget vehicula purus adipiscing
+                  massa hendrerit. Eget vehicula purus adipiscing massa.
+                </p>
+                <div
+                  className={classNames(
+                    style.case_description_btn,
+                    style.justify_center
+                  )}
+                >
+                  <Link className={buttons.btn_dark} to="/">
+                    Read the insight
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className={style.case} onClick={e => showCase(e)}>
-            <div className={style.case_view}>
-              <Img
-                fluid={images.idea.childImageSharp.fluid}
-                className={style.case_view_img}
-                alt="Steps icon"
-              />
-              <h6 className={style.case_h6}>
-                You have <br /> a startup idea
-              </h6>
-            </div>
-            <div
-              className={classNames(style.case_description, style.flow_column)}
-            >
-              <h6 className={style.case_h6}>You have a startup idea</h6>
-              <p className={style.case_p}>
-                &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nunc purus, purus vestibulum amet arcu velit. Egestas egestas
-                suscipit vitae elit neque. Eget vehicula purus adipiscing massa
-                hendrerit. Eget vehicula purus adipiscing massa hendrerit. Eget
-                vehicula purus adipiscing massa.
-              </p>
+          <div>
+            <div className={style.case} onClick={e => showCase(e)}>
+              <div className={style.case_view}>
+                <Img
+                  fluid={images.idea.childImageSharp.fluid}
+                  className={style.case_view_img}
+                  alt="Steps icon"
+                />
+                <h6 className={style.case_h6}>
+                  You have <br /> a startup idea
+                </h6>
+              </div>
               <div
                 className={classNames(
-                  style.case_description_btn,
-                  style.justify_center
+                  style.case_description,
+                  style.flow_column
                 )}
               >
-                <Link className={buttons.btn_dark} to="/">
-                  Read the insight
-                </Link>
+                <h6 className={style.case_h6}>You have a startup idea</h6>
+                <p className={style.case_p}>
+                  &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nunc purus, purus vestibulum amet arcu velit. Egestas
+                  egestas suscipit vitae elit neque. Eget vehicula purus
+                  adipiscing massa hendrerit. Eget vehicula purus adipiscing
+                  massa hendrerit. Eget vehicula purus adipiscing massa.
+                </p>
+                <div
+                  className={classNames(
+                    style.case_description_btn,
+                    style.justify_center
+                  )}
+                >
+                  <Link className={buttons.btn_dark} to="/">
+                    Read the insight
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
