@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 import classNames from "../../helpers/classNames"
 import PageHeader from "../../components/pageHeader/pageHeader"
-// import BottomForm from "../../components/bottomForm/bottomForm"
+import BottomForm from "../../components/bottomForm/bottomForm"
 import LifecycleCoverage from "../../components/lifecycleCoverage/lifecycleCoverage"
 import Steps from "../../components/steps/steps"
 import TwoColumns from "../../components/twoColumns/twoColumns"
@@ -10,11 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import page from "../../assets/styles/page.module.sass"
 import style from "./custom-software-development-services.module.sass"
-import loadable from "@loadable/component"
-
-const BottomForm = loadable(() =>
-  import("../../components/bottomForm/bottomForm")
-)
 
 export const sharpImage = graphql`
   fragment sharpImage on File {
