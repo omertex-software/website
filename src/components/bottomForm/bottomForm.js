@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import style from "./bottomForm.module.sass"
 import BackgroundImage from "gatsby-background-image"
 import classNames from "../../helpers/classNames"
-import { bitrix24ContactFormBottom } from "../../helpers/bitrix24Scripts"
+import { Bitrix24ContactForm } from "../../helpers/bitrix24Scripts"
 import { graphql, useStaticQuery } from "gatsby"
 
 const BottomForm = ({ image, title, children }) => {
-  const [contactForm, setContactForm] = useState()
-
-  useEffect(() => {
-    bitrix24ContactFormBottom(setContactForm)
-  }, [])
+  Bitrix24ContactForm(
+    'window.b24form({"id":"12","lang":"ru","sec":"dr375t","type":"inline", "node": document.getElementById("contactFormBottom")})'
+  )
 
   const defaultImage = useStaticQuery(graphql`
     query {
@@ -36,7 +34,9 @@ const BottomForm = ({ image, title, children }) => {
           <div className={classNames(style.form_column, style.form_info)}>
             {children}
           </div>
-          <div className={style.form_column}>{contactForm}</div>
+          <div className={style.form_column}>
+            <div id="contactFormBottom" />
+          </div>
         </div>
       </div>
     </BackgroundImage>

@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react"
-import { bitrix24ContactFormSection } from "../../helpers/bitrix24Scripts"
+import React from "react"
+import { Bitrix24ContactForm } from "../../helpers/bitrix24Scripts"
 import style from "./sectionForm.module.sass"
 
 const SectionForm = ({ title, color, children }) => {
-  const [contactForm, setContactForm] = useState()
-
-  useEffect(() => {
-    bitrix24ContactFormSection(setContactForm)
-  }, [])
+  Bitrix24ContactForm(
+    'window.b24form({"id":"14","lang":"ru","sec":"p2tvvt","type":"inline", "node": document.getElementById("contactFormSection")})'
+  )
 
   return (
     <section
@@ -17,7 +15,9 @@ const SectionForm = ({ title, color, children }) => {
       <div className={style.content}>
         <h4>{title}</h4>
         {children}
-        <div className={style.section_form}>{contactForm}</div>
+        <div className={style.section_form}>
+          <div id="contactFormSection" />
+        </div>
       </div>
     </section>
   )
