@@ -1,17 +1,21 @@
 .columns_box
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
   margin-bottom: -40px
 
 .column
-  max-width: 307px
+  max-width: 306px
   width: 100%
   margin-bottom: 40px
+  &:nth-child(3n+2)
+    margin: 0 20px
 
 .column_icon
   width: 110px
   height: 110px
+
+.column_icon_centered
+  margin: 0 auto
 
 .column_title
   min-height: 72px
@@ -37,12 +41,19 @@
   line-height: 30px
   letter-spacing: 0.03em
 
+@media screen and (max-width: 1095px)
+  .column
+    &:nth-child(3n+2)
+      margin: 0 10px
+
 @media screen and (max-width: 1080px)
   .columns_box
     justify-content: center
 
   .column
     margin: 0 auto 40px auto
+    &:nth-child(3n+2)
+      margin: 0 auto 40px auto
 
   .column_icon
     margin: 0 auto

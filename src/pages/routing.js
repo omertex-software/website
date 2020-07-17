@@ -192,6 +192,30 @@ export default () => {
           >
             025 Cross-platform mobile app development
           </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/services/mvp-development"
+          >
+            026 MVP development
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/services/branding"
+          >
+            027 Our branding services
+          </a>
+          <a
+            style={style.title}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/services/marketing-for-startups"
+          >
+            028 Growth marketing
+          </a>
         </div>
       </section>
     </Layout>
