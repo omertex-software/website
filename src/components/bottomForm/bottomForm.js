@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const BottomForm = ({ image, title, children }) => {
   Bitrix24ContactForm(
-    'window.b24form({"id":"12","lang":"ru","sec":"dr375t","type":"inline", "node": document.getElementById("contactFormBottom")})'
+    'window.b24form({"id":"12","lang":"en","sec":"dr375t","type":"inline", "node": document.getElementById("contactFormBottom")})'
   )
 
   const defaultImage = useStaticQuery(graphql`

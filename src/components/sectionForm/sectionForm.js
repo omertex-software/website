@@ -4,7 +4,7 @@ import style from "./sectionForm.module.sass"
 
 const SectionForm = ({ title, color, children }) => {
   Bitrix24ContactForm(
-    'window.b24form({"id":"14","lang":"ru","sec":"p2tvvt","type":"inline", "node": document.getElementById("contactFormSection")})'
+    'window.b24form({"id":"14","lang":"en","sec":"p2tvvt","type":"inline", "node": document.getElementById("contactFormSection")})'
   )
 
   return (

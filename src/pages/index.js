@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import classNames from "../helpers/classNames"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,6 +9,8 @@ import BackgroundImage from "gatsby-background-image"
 import buttons from "../assets/styles/buttons.module.sass"
 import style from "./index.module.sass"
 import MainCases from "../components/mainCases/mainCases"
+import FullScreenForm from "../components/fullScreenForm/fullScreenForm"
+import PopUpForm from "../components/popUpForm/popUpForm"
 
 import arrows from "../assets/images/main/svg_icon_two_arrows_down.svg"
 import pdf from "../assets/images/main/svg_icon_pdf.svg"
@@ -28,6 +30,17 @@ export const sharpImage = graphql`
 `
 
 export default () => {
+  const [fullScreenForm, setFullScreenForm] = useState(false)
+  const [popUpForm, setPopUpForm] = useState(false)
+
+  const reopenFullScreenForm = () => {
+    setFullScreenForm(!fullScreenForm)
+  }
+
+  const reopenPopUpForm = () => {
+    setPopUpForm(!popUpForm)
+  }
+
   const showList = target => {
     if (target.tagName === "LI") {
       target.className === style.show_questions
@@ -79,6 +92,11 @@ export default () => {
         charSet="utf-8"
         defer={false}
       />
+      <FullScreenForm
+        visible={fullScreenForm}
+        callback={reopenFullScreenForm}
+      />
+      <PopUpForm visible={popUpForm} callback={reopenPopUpForm} />
       <BackgroundImage
         Tag="section"
         className={classNames(
@@ -575,7 +593,9 @@ export default () => {
             <h3 className={style.questions_h3}>Have another question? </h3>
           </div>
           <div className={style.justify_center}>
-            <button className={buttons.btn_dark}>let`s chat</button>
+            <button className={buttons.btn_dark} onClick={reopenFullScreenForm}>
+              let`s chat
+            </button>
           </div>
         </div>
       </section>
@@ -604,7 +624,9 @@ export default () => {
             priorities.
           </p>
           <div className={style.justify_center}>
-            <button className={buttons.btn_dark}>become a client</button>
+            <button className={buttons.btn_dark} onClick={reopenPopUpForm}>
+              become a client
+            </button>
           </div>
         </div>
       </BackgroundImage>
